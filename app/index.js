@@ -1,5 +1,4 @@
 import React from "react"
-import Welcome from "./components/Welcome"
 import BottomNavigation from "./components/BottomNavigation"
 import {
   Text,
