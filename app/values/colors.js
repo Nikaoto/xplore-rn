@@ -5,6 +5,7 @@ const colors = {
   dialect: "#ff4051",
   subtleGreen: "#00e64d",
   subtleRed: "#ff2d1a",
+  navBarBackgroundColor: "white",
 }
 
 export default colors
