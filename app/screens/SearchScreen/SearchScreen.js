@@ -1,6 +1,6 @@
 import React from "react"
 import { Text, Image } from "react-native"
-import styles from "./styles"
+import styles from "../../values/styles"
 
 export default class SearchScreen extends React.Component {
   static navigationOptions = {
@@ -8,7 +8,7 @@ export default class SearchScreen extends React.Component {
     tabBarIcon: ({ tintColor }) => (
       <Image
         source={require('../../img/search.png')}
-        style={[styles.icon, {tintColor: tintColor}]}
+        style={[styles.bottomNavIcon, {tintColor: tintColor}]}
       />
     ),
   }
