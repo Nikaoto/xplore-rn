@@ -5,6 +5,7 @@ import SearchScreen from "../../screens/SearchScreen"
 import GroupsScreen from "../../screens/GroupsScreen"
 import MapScreen from "../../screens/MapScreen"
 import ProfileScreen from "../../screens/ProfileScreen"
+import colors from "../../values/colors"
 
 const BottomNavigation = TabNavigator({
 	Search : { screen: SearchScreen },
@@ -17,16 +18,16 @@ const BottomNavigation = TabNavigator({
   tabBarPosition: "bottom",
   swipeEnabled: true,
   tabBarOptions: {
-    activeTintColor: "#48c201",
+    activeTintColor: colors.primary,
     inactiveTintColor: "black",
     upperCaseLabel: true,
     showIcon: true,
     iconStyle: {
-      width: 36,
-      height: 36,
+      width: 30,
+      height: 30,
     },
     style : {
-      backgroundColor: "white",
+      backgroundColor: colors.navBarBackgroundColor,
       paddingBottom: 0,
       marginBottom: 0,
     },
