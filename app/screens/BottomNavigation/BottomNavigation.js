@@ -1,10 +1,9 @@
 import React from "react"
 import { TabNavigator } from "react-navigation"
-import SearchScreen from "../../screens/SearchScreen"
-//import TripsScreen from "../../screens/TripsScreen"
-import GroupsScreen from "../../screens/GroupsScreen"
-import MapScreen from "../../screens/MapScreen"
-import ProfileScreen from "../../screens/ProfileScreen"
+import SearchScreen from "../SearchScreen"
+import GroupsScreen from "../GroupsScreen"
+import MapScreen from "../MapScreen"
+import ProfileScreen from "../ProfileScreen"
 import colors from "../../values/colors"
 
 const BottomNavigation = TabNavigator({
