@@ -1,16 +1,18 @@
 import React, { Component } from "react"
+//import CenterLoadingBar from "./components/CenterLoadingBar"
 import BottomNavigation from "./screens/BottomNavigation"
-//import LoginComp from "./components/LoginComp"
+import Login from "./components/Login"
 import { StackNavigator } from "react-navigation"
 import { isUserLoggedIn } from "./reducers/AccountUtil"
 import colors from "./values/colors"
 import strings from "./values/strings"
+import {Text} from "react-native"
 
 class HomeScreen extends Component {
   constructor(props) {
     super(props)
-    this.state = {userLoggedIn: props.userLoggedIn}
-    isUserLoggedIn().then(userLoggedIn => this.setState({userLoggedIn: userLoggedIn}))
+    this.state = {userLoggedIn: null}
+    isUserLoggedIn().then(userLoggedIn => this.setState({userLoggedIn: false}))
   }
 
   static navigationOptions = {
@@ -20,7 +22,17 @@ class HomeScreen extends Component {
   }
 
   render() {
-    return <BottomNavigation/>
+    const userLoggedIn = this.state.userLoggedIn
+    if (userLoggedIn === null) {
+      console.log("rendering CenterLoadingBar")
+      return <Text>LOADING...</Text>
+    } else if (userLoggedIn) {
+      console.log("rendering BottomNavigation")
+      return <BottomNavigation/>
+    } else {
+      console.log("rendering LoginComponent")
+      return <Login/>
+    }
   }
 }
 
