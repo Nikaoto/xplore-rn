@@ -26,7 +26,7 @@ class HomeScreen extends Component {
     if (userLoggedIn === null) {
       console.log("rendering CenterLoadingBar")
       return <Text>LOADING...</Text>
-    } else if (userLoggedIn) {
+    } else if (userLoggedIn === true) {
       console.log("rendering BottomNavigation")
       return <BottomNavigation/>
     } else {
