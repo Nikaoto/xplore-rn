@@ -1,5 +1,6 @@
 import React from "react"
 import { Text, Image } from "react-native"
+import CustomTextInput from "../../components/CustomTextInput"
 import styles from "../../values/styles"
 
 export default class SearchScreen extends React.Component {
@@ -14,6 +15,6 @@ export default class SearchScreen extends React.Component {
   }
 
   render() {
-    return <Text>Search</Text>
+    return <CustomTextInput/>
   }
 }
