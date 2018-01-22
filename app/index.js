@@ -1,25 +1,34 @@
-import React from "react"
+import React, { Component } from "react"
 import BottomNavigation from "./screens/BottomNavigation"
-import { isUserLoggedIn } from "./reducers/AccountUtil"
+//import LoginComp from "./components/LoginComp"
 import { StackNavigator } from "react-navigation"
+import { isUserLoggedIn } from "./reducers/AccountUtil"
 import colors from "./values/colors"
 import strings from "./values/strings"
 
-if (isUserLoggedIn()) {
-  console.log("logged in lol")
-} else {
-  console.log("not logged in lmao")
+class HomeScreen extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {userLoggedIn: props.userLoggedIn}
+    isUserLoggedIn().then(userLoggedIn => this.setState({userLoggedIn: userLoggedIn}))
+  }
+
+  static navigationOptions = {
+    title: strings.xplore,
+    borderTopColor: colors.primary,
+    borderTopWidth: 2,
+  }
+
+  render() {
+    return <BottomNavigation/>
+  }
 }
 
 const XploreApp = StackNavigator({
   Home: {
-    screen: BottomNavigation,
-    navigationOptions: {
-      title: strings.xplore,
-      borderTopColor: colors.primary,
-      borderTopWidth: 2,
-    },
+    screen: HomeScreen,
   },
 })
 
 export default XploreApp
+
