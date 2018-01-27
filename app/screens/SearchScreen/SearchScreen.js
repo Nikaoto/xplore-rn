@@ -1,7 +1,7 @@
 import React from "react"
-import { Text, Image } from "react-native"
+import { View, Text, Image, StyleSheet } from "react-native"
 import CustomTextInput from "../../components/CustomTextInput"
-import styles from "../../values/styles"
+import extStyles from "../../values/styles"
 
 export default class SearchScreen extends React.Component {
   static navigationOptions = {
@@ -9,12 +9,33 @@ export default class SearchScreen extends React.Component {
     tabBarIcon: ({ tintColor }) => (
       <Image
         source={require('../../img/search.png')}
-        style={[styles.bottomNavIcon, {tintColor: tintColor}]}
+        style={[extStyles.bottomNavIcon, {tintColor: tintColor}]}
       />
     ),
   }
 
   render() {
-    return <CustomTextInput/>
+    return (
+      <View style={styles.container}>
+        <Text style={styles.xploreLogo}>Xpore Image Placeholder</Text>
+        <CustomTextInput style={{marginTop: 10}} placeholder="Username"/>
+        <CustomTextInput style={{marginTop: 10}} placeholder="Email"/>
+      </View>
+    )
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    margin: 20,
+  },
+  xploreLogo: {
+    marginHorizontal: 10,
+  },
+  usernameTextInput: {
+
+  },
+})
