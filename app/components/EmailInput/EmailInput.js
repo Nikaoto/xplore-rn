@@ -1,20 +1,14 @@
 import React, { Component } from "react"
-import { Text, TextInput, View } from "react-native"
+import CustomTextInput from "../CustomTextInput"
 
 export default class EmailInput extends Component {
   constructor(props) {
     super(props)
-    this.state = {text: ""}
   }
 
   render() {
     return (
-      <View>
-        <TextInput
-          placeholder="email"
-          onChangeText={{}}
-        />
-      </View>
+      <CustomTextInput placeholder={"Email"} keyboardType={"email-address"} />
     )
   }
 }

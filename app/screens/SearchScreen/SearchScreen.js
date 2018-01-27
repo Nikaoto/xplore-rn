@@ -1,6 +1,7 @@
 import React from "react"
 import { View, Text, Image, StyleSheet } from "react-native"
 import CustomTextInput from "../../components/CustomTextInput"
+import EmailInput from "../../components/EmailInput"
 import extStyles from "../../values/styles"
 
 export default class SearchScreen extends React.Component {
@@ -17,9 +18,9 @@ export default class SearchScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.xploreLogo}>Xpore Image Placeholder</Text>
-        <CustomTextInput style={{marginTop: 10}} placeholder="Username"/>
-        <CustomTextInput style={{marginTop: 10}} placeholder="Email"/>
+        <Text style={styles.xploreLogo}>Xpore Logo Placeholder</Text>
+        <EmailInput/>
+        <CustomTextInput style={{marginTop: 10}} placeholder={"Password"}/>
       </View>
     )
   }
@@ -34,6 +35,7 @@ const styles = StyleSheet.create({
   },
   xploreLogo: {
     marginHorizontal: 10,
+    marginBottom: 10,
   },
   usernameTextInput: {
 

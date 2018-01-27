@@ -10,6 +10,7 @@ export default class CustomTextInput extends Component {
 
   render() {
     const placeholder = this.props.placeholder || ""
+    const keyboardType = this.props.keyboardType
 
     return(
       <TextInput
@@ -17,7 +18,8 @@ export default class CustomTextInput extends Component {
         onChangeText={(text) => this.setState({text})}
         value={this.state.text}
         placeholder={placeholder}
-        underlineColorAndroid="transparent"
+        keyboardType={keyboardType}
+        underlineColorAndroid={"transparent"}
       />
     )
   }
