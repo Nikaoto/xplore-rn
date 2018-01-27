@@ -6,9 +6,21 @@ export default class EmailInput extends Component {
     super(props)
   }
 
+  onChangeText(text) {
+    if (this.props.onChangeText) {
+      this.props.onChangeText(text)
+    }
+  }
+
   render() {
     return (
-      <CustomTextInput placeholder={"Email"} keyboardType={"email-address"} />
+      <CustomTextInput
+        style={this.props.style}
+        placeholder={"Email"}
+        autoCapitalize={"none"}
+        keyboardType={"email-address"}
+        onChangeText={(text) => this.onChangeText(text)}
+      />
     )
   }
 }

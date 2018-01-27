@@ -1,5 +1,5 @@
 import React from "react"
-import { View, Text, Image, StyleSheet } from "react-native"
+import { View, Text, Image, StyleSheet, TextInput, TouchableOpacity } from "react-native"
 import CustomTextInput from "../../components/CustomTextInput"
 import EmailInput from "../../components/EmailInput"
 import extStyles from "../../values/styles"
@@ -15,12 +15,29 @@ export default class SearchScreen extends React.Component {
     ),
   }
 
+  constructor(props) {
+    super(props)
+    this.state = {emailText: ""}
+  }
+
+  onSubmit = () => {
+    console.log(this.state.emailText)
+    // if(validate emailInput){
+    // console.log("gud email")} else {
+    //console.log("bad email D:<")}
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.xploreLogo}>Xpore Logo Placeholder</Text>
-        <EmailInput/>
-        <CustomTextInput style={{marginTop: 10}} placeholder={"Password"}/>
+        <EmailInput onChangeText={(text) => this.setState({emailText: text})} style={{alignSelf: "stretch"}}/>
+        <CustomTextInput style={{alignSelf: "stretch", marginTop: 10}} placeholder={"Password"}/>
+        <TouchableOpacity style={{marginTop: 10}} onPress={this.onSubmit}>
+          <Text style={{fontSize: 30}}>
+            Submit
+          </Text>
+        </TouchableOpacity>
       </View>
     )
   }
@@ -28,9 +45,7 @@ export default class SearchScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
+    alignItems: "center",
     margin: 20,
   },
   xploreLogo: {
