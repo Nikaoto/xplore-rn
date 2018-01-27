@@ -5,17 +5,26 @@ import styles from "./styles"
 export default class CustomTextInput extends Component {
   constructor(props) {
     super(props)
-    this.state = {text: ""}
+    this.state = {text: this.props.value || ""}
+  }
+
+  onChangeText(text) {
+    this.setState({text: text})
+    if (this.props.onChangeText) {
+      this.props.onChangeText(text)
+    }
   }
 
   render() {
     return(
       <TextInput
-        style={styles.textInput}
-        onChangeText={(text) => this.setState({text})}
+        style={[styles.textInput, this.props.style]}
+        onChangeText={(text) => this.onChangeText(text)}
         value={this.state.text}
-        underlineColorAndroid="transparent"
-
+        placeholder={this.props.placeholder || ""}
+        keyboardType={this.props.keyboardType}
+        autoCapitalize={this.props.autoCapitalize || "none"}
+        underlineColorAndroid={"transparent"}
       />
     )
   }
