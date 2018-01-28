@@ -28,11 +28,11 @@ export default class LoadingIndicator extends Component {
     if (center === true) {
       return(
         <View style={{flex: 1, justifyContent: "center"}}>
-          <ActivityIndicator size={size} color="#00ff00" />
+          <ActivityIndicator size={size} color={color} />
         </View>
       )
     } else {
-      return <ActivityIndicator size={size} color="#00ff00" />
+      return <ActivityIndicator size={size} color={color} />
     }
   }
 }
