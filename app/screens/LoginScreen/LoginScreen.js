@@ -2,17 +2,17 @@ import React, { Component } from "react"
 import {View, Text, Button, TouchableOpacity, StyleSheet} from "react-native"
 import strings from "../../values/strings"
 import colors from "../../values/colors"
-import { isUserLoggedIn } from "../../reducers/AccountUtil"
+import {isUserLoggedIn, setUserLoggedIn} from "../../reducers/AccountUtil"
 import EmailInput from "../../components/EmailInput"
 import { isValidEmail } from "../../reducers/FormUtil"
 import { NavigationActions } from "react-navigation"
 import PasswordInput from "../../components/PasswordInput/PasswordInput"
+import {isFirstBoot} from "../../reducers/PrefsUtil"
 
 export default class LoginScreen extends Component {
   constructor(props) {
     super(props)
     this.state = {userLoggedIn: null}
-    isUserLoggedIn().then(userLoggedIn => this.setState({userLoggedIn: userLoggedIn}))
     this.onSubmit = this.onSubmit.bind(this)
   }
 
@@ -20,23 +20,42 @@ export default class LoginScreen extends Component {
     title: strings.login
   }
 
-  onPress() {
+  onSubmit() {
+    if (!isValidEmail(this.state.emailText)) {
+      console.log("bad email >:V")
+      return
+    }
+    setUserLoggedIn(true)
+    isFirstBoot().then(firstBoot => {
+      if (firstBoot === true) {
+        console.log("opening welcome screen")
+        this.openWelcomeScreen()
+      } else {
+        console.log("opening tabs")
 
+        this.openTabs()
+      }
+    })
   }
 
-  onSubmit() {
-    if (isValidEmail(this.state.emailText)) {
-      console.log("gud email")
-      const resetAction = NavigationActions.reset({
-        index: 0,
-        actions: [
-          NavigationActions.navigate({routeName: "Tabs"})
-        ]
-      })
-      this.props.navigation.dispatch(resetAction)
-    } else {
-      console.log("bad email D:<")
-    }
+  openWelcomeScreen() {
+    const action = NavigationActions.reset({
+      index: 0,
+      actions: [
+        NavigationActions.navigate({routeName: "Welcome"})
+      ]
+    })
+    this.props.navigation.dispatch(action)
+  }
+
+  openTabs() {
+    const action = NavigationActions.reset({
+      index: 0,
+      actions: [
+        NavigationActions.navigate({routeName: "Tabs"})
+      ]
+    })
+    this.props.navigation.dispatch(action)
   }
 
   render() {
@@ -53,20 +72,6 @@ export default class LoginScreen extends Component {
       </View>
     )
   }
-
-  /*render() {
-    const userLoggedIn = this.state.userLoggedIn
-    if (userLoggedIn === null) {
-      console.log("rendering CenterLoadingBar")
-      return <Text>LOADING...</Text>
-    } else if (userLoggedIn === true) {
-      console.log("rendering BottomNavigation")
-      return <BottomNavigation/>
-    } else {
-      console.log("rendering LoginComponent")
-      return <Login/>
-    }
-  }*/
 }
 
 const styles = StyleSheet.create({

@@ -1,6 +1,7 @@
 import React, { Component } from "react"
-import { Text, Image } from "react-native"
+import { Text, Image, View, Button } from "react-native"
 import styles from "../../values/styles"
+import {clearAllPrefs} from "../../reducers/PrefsUtil"
 
 export default class ProfileScreen extends Component {
   static navigationOptions = {
@@ -14,6 +15,13 @@ export default class ProfileScreen extends Component {
   }
 
   render() {
-    return <Text>Profile</Text>
+    return (
+      <View>
+        <Text>Profile</Text>
+        <Button
+          title={"Clear prefs"}
+          onPress={() => clearAllPrefs()}/>
+      </View>
+    )
   }
 }

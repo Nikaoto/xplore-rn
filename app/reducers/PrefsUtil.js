@@ -4,16 +4,25 @@ import { AsyncStorage } from "react-native"
 
 const FIRST_BOOT_KEY = "@Xplore:first_boot"
 
+export async function clearAllPrefs() {
+  try {
+    return await AsyncStorage.clear(() => console.log("all prefs cleared"))
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export async function isFirstBoot() {
   try {
     console.log("isFirstBoot()")
     const value = await AsyncStorage.getItem(FIRST_BOOT_KEY, (value) => JSON.parse(value))
     if (value !== null) {
-      return value
+      console.log("isFirstBoot =", value)
+      return value === "true"
     } else {
       console.log("value === null")
-      setFirstBoot(false)
-      return false
+      setFirstBoot(true)
+      return true
     }
   } catch (error) {
     console.log(error)

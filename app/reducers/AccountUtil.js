@@ -6,7 +6,7 @@ export async function isUserLoggedIn() {
   try {
     const value = await AsyncStorage.getItem(USER_LOGGED_IN_KEY, (value) => JSON.parse(value))
     if (value !== null) {
-      return value
+      return value === "true"
     } else {
       setUserLoggedIn(false)
       return false
