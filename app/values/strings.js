@@ -2,6 +2,7 @@
 
 const strings = {
   xplore: "Xplore",
+  login: "Log In",
 }
 
 export default strings
