@@ -6,12 +6,14 @@ import { isUserLoggedIn } from "../../reducers/AccountUtil"
 import EmailInput from "../../components/EmailInput"
 import CustomTextInput from "../../components/CustomTextInput"
 import { isValidEmail } from "../../reducers/FormUtil"
+import { NavigationActions } from "react-navigation"
 
 export default class LoginScreen extends Component {
   constructor(props) {
     super(props)
     this.state = {userLoggedIn: null}
     isUserLoggedIn().then(userLoggedIn => this.setState({userLoggedIn: userLoggedIn}))
+    this.onSubmit = this.onSubmit.bind(this)
   }
 
   static navigationOptions = {
@@ -22,10 +24,16 @@ export default class LoginScreen extends Component {
 
   }
 
-  onSubmit = () => {
+  onSubmit() {
     if (isValidEmail(this.state.emailText)) {
       console.log("gud email")
-      this.props.navigation.navigate("Tabs")
+      const resetAction = NavigationActions.reset({
+        index: 0,
+        actions: [
+          NavigationActions.navigate({routeName: "Tabs"})
+        ]
+      })
+      this.props.navigation.dispatch(resetAction)
     } else {
       console.log("bad email D:<")
     }
