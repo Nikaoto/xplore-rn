@@ -20,6 +20,7 @@ export default class EmailInput extends Component {
         autoCapitalize={"none"}
         keyboardType={"email-address"}
         onChangeText={(text) => this.onChangeText(text)}
+        autoCorrect={false}
       />
     )
   }

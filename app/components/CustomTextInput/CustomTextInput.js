@@ -25,6 +25,7 @@ export default class CustomTextInput extends Component {
         keyboardType={this.props.keyboardType}
         autoCapitalize={this.props.autoCapitalize || "none"}
         underlineColorAndroid={"transparent"}
+        autoCorrect={this.props.autoCorrect || false}
       />
     )
   }
