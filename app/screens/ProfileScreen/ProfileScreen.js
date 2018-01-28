@@ -1,8 +1,8 @@
-import React from "react"
+import React, { Component } from "react"
 import { Text, Image } from "react-native"
 import styles from "../../values/styles"
 
-export default class ProfileScreen extends React.Component {
+export default class ProfileScreen extends Component {
   static navigationOptions = {
     tabBarLabel: 'Profile',
     tabBarIcon: ({ tintColor }) => (

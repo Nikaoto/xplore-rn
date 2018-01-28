@@ -8,6 +8,8 @@ import strings from "../values/strings"
 import { Text } from "react-native"
 import LoginScreen from "../screens/LoginScreen"
 
+//class StartScreen extends
+
 export const Root = StackNavigator({
   Login: {
     screen: LoginScreen,
