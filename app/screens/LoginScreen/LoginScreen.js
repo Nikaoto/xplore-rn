@@ -4,9 +4,9 @@ import strings from "../../values/strings"
 import colors from "../../values/colors"
 import { isUserLoggedIn } from "../../reducers/AccountUtil"
 import EmailInput from "../../components/EmailInput"
-import CustomTextInput from "../../components/CustomTextInput"
 import { isValidEmail } from "../../reducers/FormUtil"
 import { NavigationActions } from "react-navigation"
+import PasswordInput from "../../components/PasswordInput/PasswordInput"
 
 export default class LoginScreen extends Component {
   constructor(props) {
@@ -44,7 +44,7 @@ export default class LoginScreen extends Component {
       <View style={styles.container}>
         <Text style={styles.xploreLogo}>Xpore Logo Placeholder</Text>
         <EmailInput onChangeText={(text) => this.setState({emailText: text})} style={{alignSelf: "stretch"}}/>
-        <CustomTextInput style={{alignSelf: "stretch", marginTop: 10}} placeholder={"Password"}/>
+        <PasswordInput style={{alignSelf: "stretch", marginTop: 10}}/>
         <TouchableOpacity style={{marginTop: 10}} onPress={this.onSubmit}>
           <Text style={{fontSize: 30}}>
             Submit
