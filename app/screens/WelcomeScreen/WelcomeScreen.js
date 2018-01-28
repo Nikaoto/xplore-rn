@@ -1,7 +1,7 @@
 import React, { Component } from "react"
-import { View, Text, StyleSheet } from "react-native"
+import { View, Text, Button, StyleSheet } from "react-native"
 import {setFirstBoot} from "../../reducers/PrefsUtil"
-import NavigationActions from "react-navigation"
+import { NavigationActions } from "react-navigation"
 
 export default class WelcomeScreen extends Component {
   constructor(props) {
@@ -10,7 +10,7 @@ export default class WelcomeScreen extends Component {
 
   onPress() {
     setFirstBoot(false)
-    this.openTabs()
+    this.openTabsScreen()
   }
 
   openTabsScreen() {

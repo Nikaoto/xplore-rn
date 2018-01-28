@@ -1,5 +1,6 @@
 import React from "react"
-import { Text, Image } from "react-native"
+import { Text, Image, View } from "react-native"
+import LoadingIndicator from "../../components/LoadingIndicator"
 import styles from "../../values/styles"
 
 export default class MapScreen extends React.Component {
@@ -14,6 +15,6 @@ export default class MapScreen extends React.Component {
   }
 
   render() {
-    return <Text>Map</Text>
+    return <LoadingIndicator size={"large"} center={true}/>
   }
 }

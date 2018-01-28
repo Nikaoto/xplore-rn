@@ -1,26 +1,14 @@
 import React, { Component } from "react"
-import {TabNavigator, StackNavigator, NavigationActions} from "react-navigation"
-//import CenterLoadingBar from "./components/CenterLoadingBar"
-import Tabs from "../screens/Tabs"
+import { ActivityIndicator, View } from "react-native"
+import { StackNavigator, NavigationActions } from "react-navigation"
 import { isUserLoggedIn } from "../reducers/AccountUtil"
 import { isFirstBoot } from "../reducers/PrefsUtil"
 import colors from "../values/colors"
 import strings from "../values/strings"
-import { Text } from "react-native"
+import Tabs from "../screens/Tabs"
 import LoginScreen from "../screens/LoginScreen"
-//import WelcomeScreen from "../screens/WelcomeScreen/WelcomeScreen"
-
-class WelcomeScreen extends Component {
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
-    return(
-      <Text>Welcome Screen</Text>
-    )
-  }
-}
+import WelcomeScreen from "../screens/WelcomeScreen"
+import LoadingIndicator from "../components/LoadingIndicator/LoadingIndicator"
 
 class StartScreen extends Component {
   constructor(props) {
@@ -69,7 +57,8 @@ class StartScreen extends Component {
   }
 
   render() {
-    return <Text>Loading...</Text>
+    return <LoadingIndicator center={true} size={"large"}/>
+
   }
 }
 
