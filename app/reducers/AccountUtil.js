@@ -4,12 +4,10 @@ const USER_LOGGED_IN_KEY = "@Xplore:user_logged_in"
 
 export async function isUserLoggedIn() {
   try {
-    console.log("isUserLoggedIn()")
     const value = await AsyncStorage.getItem(USER_LOGGED_IN_KEY, (value) => JSON.parse(value))
     if (value !== null) {
       return value
     } else {
-      console.log("value === null")
       setUserLoggedIn(false)
       return false
     }
