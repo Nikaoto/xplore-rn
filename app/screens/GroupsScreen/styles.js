@@ -5,6 +5,11 @@ const styles = StyleSheet.create({
 		width: 30,
 		height: 30,
   },
+  button: {
+    alignItems: 'center',
+    backgroundColor: '#DDDDDD',
+    padding: 10
+  },
 })
 
 export default styles
