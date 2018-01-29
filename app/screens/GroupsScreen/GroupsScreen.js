@@ -1,7 +1,8 @@
 import React from "react"
-import { View, Text, Image, Button, AsyncStorage } from "react-native"
-import { isUserLoggedIn, setUserLoggedIn } from "../../reducers/AccountUtil"
-import styles from "../../values/styles"
+import { View, Text, Image, AsyncStorage } from "react-native"
+import Button from "../../components/Button"
+import globalStyles from "../../values/styles"
+import styles from "./styles"
 
 export default class GroupsScreen extends React.Component {
   static navigationOptions = {
@@ -13,25 +14,16 @@ export default class GroupsScreen extends React.Component {
       />
     ),
   }
-
-  onLoadPress() {
-    isUserLoggedIn().then(value => console.log(value))
-  }
-
-  onSavePress() {
-    setUserLoggedIn(true)
-  }
-
   render() {
     return (
-      <View>
-        <Text>Groups</Text>
+      <View style={globalStyles.container}>
         <Button
-          title="Click to check if user logged in"
-          onPress={this.onLoadPress}/>
-        <Button
-          title="Click to save user logged in"
-          onPress={this.onSavePress}/>
+          onPress={() => console.log("OnPress")}
+          underlayColor={"#000000"}
+          style={styles.button}>
+          <Text>TOUCC ME</Text>
+        </Button>
+        <Text>Groups Screen</Text>
       </View>
     )
   }
