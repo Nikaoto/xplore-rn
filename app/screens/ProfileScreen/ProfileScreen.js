@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { Text, Image, View, Button } from "react-native"
 import styles from "../../values/styles"
 import {clearAllPrefs} from "../../reducers/PrefsUtil"
+import {isUserLoggedIn, setUserLoggedIn} from "../../reducers/AccountUtil"
 
 export default class ProfileScreen extends Component {
   static navigationOptions = {
@@ -14,13 +15,29 @@ export default class ProfileScreen extends Component {
     ),
   }
 
+  onLoadPress() {
+    isUserLoggedIn().then(value => console.log(value))
+  }
+
+  onSavePress() {
+    setUserLoggedIn(true)
+  }
+
+
   render() {
     return (
-      <View>
-        <Text>Profile</Text>
+      <View style={styles.container}>
+        <Text>Profile Screen</Text>
         <Button
           title={"Clear prefs"}
           onPress={() => clearAllPrefs()}/>
+        <Text style={{marginTop: 10, marginBottom: 10}}>Login Control</Text>
+        <Button
+          title="Click to check if user logged in"
+          onPress={() => this.onLoadPress()}/>
+        <Button
+          title="Click to save user logged in"
+          onPress={() => this.onSavePress()}/>
       </View>
     )
   }
