@@ -18,7 +18,7 @@ export default class Button extends Component {
   render() {
     if (Platform.os === "ios") {
       const activeOpacity = this.props.activeOpacity || 0.2
-      const style = [this.props.style, styles.touchableOpacity]
+      const style = [styles.touchableOpacity, this.props.style]
 
       return (
         <TouchableOpacity onPress={this.onPress} activeOpacity={activeOpacity}>
@@ -28,7 +28,7 @@ export default class Button extends Component {
         </TouchableOpacity>
       )
     } else {
-      const style = [this.props.style, styles.touchableNativeFeedback]
+      const style = [styles.touchableNativeFeedback, this.props.style]
 
       return (
         <TouchableNativeFeedback onPress={this.onPress}>
