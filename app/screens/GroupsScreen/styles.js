@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native"
+import {StyleSheet} from "react-native"
 
 const styles = StyleSheet.create({
 	icon: {
@@ -7,8 +7,8 @@ const styles = StyleSheet.create({
   },
   button: {
     alignItems: 'center',
-    backgroundColor: '#DDDDDD',
-    padding: 10
+    padding: 10,
+    marginBottom: 30,
   },
 })
 

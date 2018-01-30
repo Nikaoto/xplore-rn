@@ -1,6 +1,7 @@
 import React from "react"
-import { View, Text, Image, AsyncStorage } from "react-native"
+import {Image, Text, View} from "react-native"
 import Button from "../../components/Button"
+import CardView from "../../components/CardView"
 import globalStyles from "../../values/styles"
 import styles from "./styles"
 
@@ -10,7 +11,7 @@ export default class GroupsScreen extends React.Component {
     tabBarIcon: ({ tintColor }) => (
       <Image
         source={require('../../img/groups.png')}
-        style={[styles.bottomNavIcon, {tintColor: tintColor}]}
+        style={[globalStyles.bottomNavIcon, {tintColor: tintColor}]}
       />
     ),
   }
@@ -19,11 +20,18 @@ export default class GroupsScreen extends React.Component {
       <View style={globalStyles.container}>
         <Button
           onPress={() => console.log("OnPress")}
-          underlayColor={"#000000"}
           style={styles.button}>
           <Text>TOUCC ME</Text>
         </Button>
         <Text>Groups Screen</Text>
+        <CardView elevation={2}>
+          <Text>
+            Sample Text Boi
+          </Text>
+          <Button>
+            <Text>Sample Button Boi</Text>
+          </Button>
+        </CardView>
       </View>
     )
   }
