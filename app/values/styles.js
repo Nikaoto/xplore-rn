@@ -6,7 +6,8 @@ const styles = {
     height: 28,
   },
   container: {
-    margin: 20,
+    marginTop: 5,
+    marginHorizontal: 5,
     alignItems: "center",
   },
   stretch: {
