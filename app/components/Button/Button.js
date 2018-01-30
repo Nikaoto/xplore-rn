@@ -9,6 +9,15 @@ export default class Button extends Component {
     this.onPress = this.onPress.bind(this)
   }
 
+  componentWillMount() {
+    // Configure style
+    if (Platform.OS === "ios") {
+      this.setState({ finalStyle: [styles.touchableOpacity, this.props.style]})
+    } else {
+      this.setState({ finalStyle: [styles.touchableNativeFeedback, this.props.style]})
+    }
+  }
+
   onPress() {
     if (this.props.onPress) {
       this.props.onPress()
@@ -16,23 +25,19 @@ export default class Button extends Component {
   }
 
   render() {
-    if (Platform.os === "ios") {
+    const finalStyle = this.state.finalStyle
+    if (Platform.OS === "ios") {
       const activeOpacity = this.props.activeOpacity || 0.2
-      const style = [styles.touchableOpacity, this.props.style]
 
       return (
-        <TouchableOpacity onPress={this.onPress} activeOpacity={activeOpacity}>
-          <View style={style}>
-            {this.props.children}
-          </View>
+        <TouchableOpacity style={finalStyle} onPress={this.onPress} activeOpacity={activeOpacity}>
+          {this.props.children}
         </TouchableOpacity>
       )
     } else {
-      const style = [styles.touchableNativeFeedback, this.props.style]
-
       return (
         <TouchableNativeFeedback onPress={this.onPress}>
-          <View style={style}>
+          <View style={finalStyle}>
             {this.props.children}
           </View>
         </TouchableNativeFeedback>
