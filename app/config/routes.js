@@ -1,10 +1,7 @@
-import React, { Component } from "react"
-import { ActivityIndicator, View } from "react-native"
-import { StackNavigator, NavigationActions } from "react-navigation"
-import { isUserLoggedIn } from "../reducers/AccountUtil"
-import { isFirstBoot } from "../reducers/PrefsUtil"
-import colors from "../values/colors"
-import strings from "../values/strings"
+import React, {Component} from "react"
+import {NavigationActions, StackNavigator} from "react-navigation"
+import {isUserLoggedIn} from "../reducers/AccountUtil"
+import {isFirstBoot} from "../reducers/PrefsUtil"
 import Tabs from "../screens/Tabs"
 import LoginScreen from "../screens/LoginScreen"
 import WelcomeScreen from "../screens/WelcomeScreen"
@@ -76,5 +73,5 @@ export const Root = StackNavigator({
     screen: Tabs,
   },
 }, {
-  mode: "modal",
+  headerMode: "none",
 })
