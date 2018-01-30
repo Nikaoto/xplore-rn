@@ -1,7 +1,7 @@
 import React from "react"
-import { Text, Image, View } from "react-native"
+import {Image} from "react-native"
 import LoadingIndicator from "../../components/LoadingIndicator"
-import styles from "../../values/styles"
+import globalStyles from "../../values/styles"
 
 export default class MapScreen extends React.Component {
   static navigationOptions = {
@@ -9,7 +9,7 @@ export default class MapScreen extends React.Component {
     tabBarIcon: ({ tintColor }) => (
       <Image
         source={require('../../img/map.png')}
-        style={[styles.bottomNavIcon, {tintColor: tintColor}]}
+        style={[globalStyles.bottomNavIcon, {tintColor: tintColor}]}
       />
     ),
   }

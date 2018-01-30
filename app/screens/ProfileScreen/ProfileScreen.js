@@ -1,6 +1,6 @@
-import React, { Component } from "react"
-import { Text, Image, View, Button } from "react-native"
-import styles from "../../values/styles"
+import React, {Component} from "react"
+import {Button, Image, Text, View} from "react-native"
+import globalStyles from "../../values/styles"
 import {clearAllPrefs} from "../../reducers/PrefsUtil"
 import {isUserLoggedIn, setUserLoggedIn} from "../../reducers/AccountUtil"
 
@@ -10,7 +10,7 @@ export default class ProfileScreen extends Component {
     tabBarIcon: ({ tintColor }) => (
       <Image
         source={require('../../img/profile.png')}
-        style={[styles.bottomNavIcon, {tintColor: tintColor}]}
+        style={[globalStyles.bottomNavIcon, {tintColor: tintColor}]}
       />
     ),
   }
@@ -26,7 +26,7 @@ export default class ProfileScreen extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={globalStyles.container}>
         <Text>Profile Screen</Text>
         <Button
           title={"Clear prefs"}

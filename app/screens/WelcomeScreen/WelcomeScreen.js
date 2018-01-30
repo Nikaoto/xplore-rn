@@ -1,7 +1,8 @@
-import React, { Component } from "react"
-import { View, Text, Button, StyleSheet } from "react-native"
+import React, {Component} from "react"
+import {StyleSheet, Text, View} from "react-native"
+import {NavigationActions} from "react-navigation"
+import Button from "../../components/Button"
 import {setFirstBoot} from "../../reducers/PrefsUtil"
-import { NavigationActions } from "react-navigation"
 
 export default class WelcomeScreen extends Component {
   constructor(props) {
@@ -26,11 +27,10 @@ export default class WelcomeScreen extends Component {
   render() {
     return(
       <View style={styles.container}>
-        <Text style={{fontSize: 40}} >Welcome screen bois</Text>
-        <Button
-          title={"Finish intro"}
-          onPress={() => this.onPress()}
-        />
+        <Text style={{fontSize: 35}} >Welcome screen bois</Text>
+        <Button onPress={() => this.onPress()}>
+          <Text>Finish Intro</Text>
+        </Button>
       </View>
     )
   }
