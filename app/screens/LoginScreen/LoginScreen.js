@@ -1,13 +1,17 @@
-import React, { Component } from "react"
-import {View, Text, Button, TouchableOpacity, StyleSheet} from "react-native"
-import strings from "../../values/strings"
-import colors from "../../values/colors"
-import {isUserLoggedIn, setUserLoggedIn} from "../../reducers/AccountUtil"
+import React, {Component} from "react"
+import {NavigationActions} from "react-navigation"
+import {StyleSheet, Text, View} from "react-native"
 import EmailInput from "../../components/EmailInput"
-import { isValidEmail } from "../../reducers/FormUtil"
-import { NavigationActions } from "react-navigation"
-import PasswordInput from "../../components/PasswordInput/PasswordInput"
+import PasswordInput from "../../components/PasswordInput"
+import Button from "../../components/Button"
+
+import strings from "../../values/strings"
+
+import {setUserLoggedIn} from "../../reducers/AccountUtil"
+import {isValidEmail} from "../../reducers/FormUtil"
 import {isFirstBoot} from "../../reducers/PrefsUtil"
+
+// TODO write description
 
 export default class LoginScreen extends Component {
   constructor(props) {
@@ -29,6 +33,7 @@ export default class LoginScreen extends Component {
     isFirstBoot().then(firstBoot => {
       if (firstBoot === true) {
         console.log("opening welcome screen")
+
         this.openWelcomeScreen()
       } else {
         console.log("opening tabs")
@@ -64,11 +69,11 @@ export default class LoginScreen extends Component {
         <Text style={styles.xploreLogo}>Xpore Logo Placeholder</Text>
         <EmailInput onChangeText={(text) => this.setState({emailText: text})} style={{alignSelf: "stretch"}}/>
         <PasswordInput style={{alignSelf: "stretch", marginTop: 10}}/>
-        <TouchableOpacity style={{marginTop: 10}} onPress={this.onSubmit}>
-          <Text style={{fontSize: 30}}>
-            Submit
+        <Button style={styles.xploreLoginButton} onPress={this.onSubmit}>
+          <Text style={{fontSize: 20, fontWeight: "bold"}}>
+            Log In / Register
           </Text>
-        </TouchableOpacity>
+        </Button>
       </View>
     )
   }
@@ -80,7 +85,11 @@ const styles = StyleSheet.create({
     margin: 20,
   },
   xploreLogo: {
-    marginHorizontal: 10,
-    marginBottom: 10,
+    margin: 10,
   },
+  xploreLoginButton: {
+    marginTop: 30,
+    padding: 9,
+    alignSelf: "stretch",
+  }
 })
