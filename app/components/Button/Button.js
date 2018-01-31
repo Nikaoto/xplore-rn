@@ -1,6 +1,12 @@
-import React, { Component } from "react"
-import { Platform, TouchableNativeFeedback, TouchableOpacity, Text, View} from "react-native"
+import React, {Component} from "react"
+import {Platform, TouchableNativeFeedback, TouchableOpacity, View} from "react-native"
 import styles from "./styles"
+
+/*
+ Props:
+ activeOpacity: Float
+ style: StyleSheet
+*/
 
 export default class Button extends Component {
   constructor(props) {
