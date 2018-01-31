@@ -7,6 +7,8 @@ const colors = {
   subtleRed: "#ff2d1a",
   navBarBackgroundColor: "white",
   greyText: "#8c8c8c",
+  greyerText: "#878787",
+  greyestText: "#737373",
 }
 
 export default colors
