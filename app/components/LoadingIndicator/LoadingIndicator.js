@@ -1,5 +1,13 @@
-import React, { Component } from "react"
-import { Platform, View, ActivityIndicator } from "react-native"
+import React, {Component} from "react"
+import {ActivityIndicator, Platform, View} from "react-native"
+
+/*
+  Props
+  -----
+  size: Enum(small, large)
+  center: Boolean
+  color: Color
+*/
 
 export default class LoadingIndicator extends Component {
   constructor(props){
@@ -12,11 +20,19 @@ export default class LoadingIndicator extends Component {
   }
 
   componentDidMount() {
-    // Makes large spinner larger on android
-    if (Platform.OS === "android") {
-      if (this.state.size === "large") {
-        this.setState({size: 65})
+    // If size is a number on ios, specify correct size in string
+    if (Platform.OS === "ios" && !isNaN(this.state.size)) {
+      if (this.state.size >= 30) {
+        this.setState({ size: "large" })
+      } else {
+        this.setState({ size: "small" })
       }
+      return
+    }
+
+    // Makes large spinner larger on android
+    if (Platform.OS === "android" && this.state.size === "large") {
+      this.setState({size: 65})
     }
   }
 
