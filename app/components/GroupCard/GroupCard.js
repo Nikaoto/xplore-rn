@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
   leaderImage: {
     height: 50,
     width: 50,
-    borderRadius: 30,
+    borderRadius: 25,
   },
   leaderTextLayout: {
     marginLeft: 5,

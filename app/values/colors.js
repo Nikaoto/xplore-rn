@@ -7,7 +7,7 @@ const colors = {
   subtleRed: "#ff2d1a",
   navBarBackgroundColor: "white",
   greyText: "#8c8c8c",
-  greyerText: "#878787",
+  greyerText: "#7d7d7d",
   greyestText: "#737373",
 }
 
