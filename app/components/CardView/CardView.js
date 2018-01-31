@@ -1,25 +1,42 @@
-import React, { Component } from "react"
-import { Platform, View, StyleSheet } from "react-native"
+import React, {Component} from "react"
+import {StyleSheet, View} from "react-native"
+
+/*
+  Props
+  -----
+  style: StyleSheet
+  elevation: Int (1-16)
+  shadowRadius: Int (0.5-8) // Always half of elevation
+  borderRadius: Int
+ */
 
 export default class CardView extends Component {
   constructor(props) {
     super(props)
     this.state = {}
     this.onPress = this.onPress.bind(this)
+    this.defaults = {
+      elevation: 1,
+      shadowRadius: 0.5,
+      borderRadius: 5,
+    }
   }
 
   componentWillMount() {
     // Configure style
-    const elevation = this.props.elevation || 1
-    const primaryStyle = {
-      elevation: elevation,
-      shadowRadius: elevation/2,
-      borderRadius: this.props.borderRadius || 5
-    }
+    const elevation = this.props.elevation || this.defaults.elevation
+    const primaryStyles = StyleSheet.create({
+      card: {
+        elevation: elevation,
+        shadowRadius: elevation / 2,
+        borderRadius: this.props.borderRadius || this.defaults.borderRadius
+      }
+    })
 
-    this.setState({ finalStyle: [defaultStyles.card, this.props.style, primaryStyle] })
+    this.setState({ finalStyle: [defaultStyles.card, this.props.style, primaryStyles.card] })
   }
 
+  // TODO create TouchableCardView and remove this
   onPress() {
     if (this.props.onPress) {
       this.props.onPress()
@@ -40,9 +57,6 @@ export default class CardView extends Component {
 // Defaults
 const defaultStyles = StyleSheet.create({
   card: {
-    elevation: 1,
-    shadowRadius: 1,
-    borderRadius: 5, //TODO remove the first three elements, they are redundant
     backgroundColor: "white",
     padding: 15,
     shadowOpacity: 0.25,
