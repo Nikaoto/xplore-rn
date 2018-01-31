@@ -8,6 +8,7 @@ import WelcomeScreen from "../screens/WelcomeScreen"
 import LoadingIndicator from "../components/LoadingIndicator/LoadingIndicator"
 
 class StartScreen extends Component {
+  // TODO put xplore logo here instead of loading indicator
   constructor(props) {
     super(props)
   }

@@ -1,6 +1,20 @@
-import React, { Component } from "react"
-import { TextInput } from "react-native"
+import React, {Component} from "react"
+import {TextInput} from "react-native"
 import styles from "./styles"
+
+/*
+  Props
+  -----
+  style: StyleSheet
+  onChangeText: (text) => {}
+  value: String
+  placeholder: String
+  keyboardType: Enum(default, numeric, email-address, phone-pad)
+  autoCapitalize: Enum(none, sentences, words, characters)
+  underlineColorAndroid: Color
+  autoCorrect: Boolean
+  secureTextEntry: Boolean
+ */
 
 export default class CustomTextInput extends Component {
   constructor(props) {
