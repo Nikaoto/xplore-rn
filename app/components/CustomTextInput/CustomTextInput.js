@@ -11,7 +11,6 @@ import styles from "./styles"
   placeholder: String
   keyboardType: Enum(default, numeric, email-address, phone-pad)
   autoCapitalize: Enum(none, sentences, words, characters)
-  underlineColorAndroid: Color
   autoCorrect: Boolean
   secureTextEntry: Boolean
  */

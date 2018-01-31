@@ -1,5 +1,13 @@
-import React, { Component } from "react"
+import React, {Component} from "react"
 import CustomTextInput from "../CustomTextInput"
+
+/*
+  Props
+  -----
+  style: StyleSheet
+  onChangeText: (text) => {}
+  value: String
+ */
 
 export default class EmailInput extends Component {
   constructor(props) {
@@ -16,10 +24,11 @@ export default class EmailInput extends Component {
     return (
       <CustomTextInput
         style={this.props.style}
+        onChangeText={(text) => this.onChangeText(text)}
+        value={this.props.value || ""}
         placeholder={"Email"}
         autoCapitalize={"none"}
         keyboardType={"email-address"}
-        onChangeText={(text) => this.onChangeText(text)}
         autoCorrect={false}
       />
     )
