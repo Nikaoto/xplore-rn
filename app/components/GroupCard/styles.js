@@ -1,8 +1,6 @@
 import {Platform, StyleSheet} from "react-native"
 import colors from "../../values/colors"
 
-const mediumFont = Platform.OS === "ios" ? "normal" : "sans-serif-medium"
-
 const styles = StyleSheet.create({
   topLayout: {
     flexDirection: "row",
@@ -28,7 +26,7 @@ const styles = StyleSheet.create({
   },
   leaderReputationText: {
     color: colors.greyText,
-    fontFamily: mediumFont,
+    fontFamily: Platform.OS === "android" ? "sans-serif-medium" : null,
     fontSize: 13,
   },
   leaderNameText: {
@@ -76,13 +74,13 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
   },
   footerIcon: {
-    height: 22,
-    width: 22,
+    height: 20,
+    width: 20,
   },
   footerText: {
     color: colors.greyerText,
     marginLeft: 3,
-    paddingTop: 1,
+    paddingTop: Platform.OS === "ios" ? 2 : 1,
   },
 })
 
