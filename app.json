@@ -1,8 +1,10 @@
 {
   "expo": {
     "sdkVersion": "23.0.0",
-    "androidStatusBar":{
-    	"backgroundColor": "#309f4c",
-    },
-  }
+    "androidStatusBar": {
+      "backgroundColor": "#309f4c"
+    }
+  },
+  "name": "xplore_rn",
+  "displayName": "Xplore"
 }

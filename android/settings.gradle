@@ -1,0 +1,3 @@
+rootProject.name = 'xplore_rn'
+
+include ':app'
