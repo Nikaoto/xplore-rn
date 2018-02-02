@@ -1,8 +1,9 @@
 import React from "react"
-import {Image, StyleSheet, Text, View} from "react-native"
-import globalStyles from "../../values/styles"
+import { Text, View } from "react-native"
 import Button from "../../components/Button/Button"
 import CardView from "../../components/CardView/CardView"
+import Icon from "react-native-vector-icons/MaterialIcons"
+import globalStyles from "../../values/styles"
 
 export default class SearchScreen extends React.Component {
 
@@ -14,10 +15,7 @@ export default class SearchScreen extends React.Component {
   static navigationOptions = {
     tabBarLabel: 'Search',
     tabBarIcon: ({ tintColor }) => (
-      <Image
-        source={require('../../img/search.png')}
-        style={[globalStyles.bottomNavIcon, {tintColor: tintColor}]}
-      />
+      <Icon name="search" size={globalStyles.bottomNavIconSize} color={tintColor}/>
     ),
   }
 
@@ -43,10 +41,3 @@ export default class SearchScreen extends React.Component {
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-    margin: 20,
-  },
-})

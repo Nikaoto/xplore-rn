@@ -1,16 +1,13 @@
 import React from "react"
-import {Image} from "react-native"
 import LoadingIndicator from "../../components/LoadingIndicator"
+import Icon from "react-native-vector-icons/MaterialIcons"
 import globalStyles from "../../values/styles"
 
 export default class MapScreen extends React.Component {
   static navigationOptions = {
     tabBarLabel: 'Map',
     tabBarIcon: ({ tintColor }) => (
-      <Image
-        source={require('../../img/map.png')}
-        style={[globalStyles.bottomNavIcon, {tintColor: tintColor}]}
-      />
+      <Icon name="place" size={globalStyles.bottomNavIconSize} color={tintColor}/>
     ),
   }
 

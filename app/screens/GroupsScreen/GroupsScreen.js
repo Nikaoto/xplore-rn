@@ -1,17 +1,15 @@
 import React from "react"
-import {Image, StyleSheet, Text, View} from "react-native"
-import globalStyles from "../../values/styles"
+import { StyleSheet, Text, View } from "react-native"
+import Icon from "react-native-vector-icons/MaterialIcons"
 import GroupCard from "../../components/GroupCard/GroupCard"
+import globalStyles from "../../values/styles"
 
 export default class GroupsScreen extends React.Component {
 
   static navigationOptions = {
     tabBarLabel: 'Groups',
     tabBarIcon: ({ tintColor }) => (
-      <Image
-        source={require('../../img/groups.png')}
-        style={[globalStyles.bottomNavIcon, {tintColor: tintColor}]}
-      />
+      <Icon name="group" size={globalStyles.bottomNavIconSize} color={tintColor}/>
     ),
   }
   render() {

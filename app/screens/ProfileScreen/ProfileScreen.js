@@ -1,17 +1,15 @@
-import React, {Component} from "react"
-import {Button, Image, Text, View} from "react-native"
+import React, { Component } from "react"
+import { Button, Text, View } from "react-native"
+import Icon from "react-native-vector-icons/MaterialIcons"
+import { isUserLoggedIn, setUserLoggedIn } from "../../reducers/AccountUtil"
+import { clearAllPrefs } from "../../reducers/PrefsUtil"
 import globalStyles from "../../values/styles"
-import {clearAllPrefs} from "../../reducers/PrefsUtil"
-import {isUserLoggedIn, setUserLoggedIn} from "../../reducers/AccountUtil"
 
 export default class ProfileScreen extends Component {
   static navigationOptions = {
     tabBarLabel: 'Profile',
     tabBarIcon: ({ tintColor }) => (
-      <Image
-        source={require('../../img/profile.png')}
-        style={[globalStyles.bottomNavIcon, {tintColor: tintColor}]}
-      />
+      <Icon name="account-circle" size={globalStyles.bottomNavIconSize} color={tintColor}/>
     ),
   }
 
