@@ -28,7 +28,6 @@ Android:
 ```
 react-native run-android
 ```
-<br><br>
 
 iOS:
 ```
