@@ -3,8 +3,8 @@ Xplore app in React Native
 
 # Using
 - yarn
-- create-react-native-app
 - react-navigation
+- react-native-fast-image
 
 # Install
 Install Yarn
@@ -17,6 +17,7 @@ npm install -g yarn
 
 Install all required dependencies
 ```
+cd xplore-rn
 yarn install
 ```
 <br>
