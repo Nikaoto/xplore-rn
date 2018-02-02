@@ -22,7 +22,15 @@ yarn install
 ```
 <br>
 
-Launch app
+# Launch
+
+Android:
 ```
-yarn start
+react-native run-android
+```
+<br><br>
+
+iOS:
+```
+react-native run-ios
 ```
