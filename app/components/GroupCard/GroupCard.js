@@ -15,7 +15,6 @@ export default class GroupCard extends Component {
   render() {
     const groupImageSource = "https://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=450x300&maptype=hybrid&center=41.8277156308525,44.967842660844326&markers=color:orange|41.8277156308525,44.967842660844326"
     const leaderImageSource = "https://www.sardiniauniqueproperties.com/wp-content/uploads/2015/10/square-profile-pic.jpg"
-    const footerIconSize = 20
 
     return(
       <CardView elevation={3} style={styles.groupCard}>
@@ -28,8 +27,8 @@ export default class GroupCard extends Component {
             </View>
           </View>
           <View style={styles.badgeLayout}>
-            <FastImage resizeMode={"contain"} source={require('../../img/beenhere.png')} style={styles.beenHereIcon}/>
-            <FastImage resizeMode={"contain"} source={require('../../img/invite.png')} style={styles.inviteIcon}/>
+            <Icon name="marker-check" color={colors.subtleGreen} size={dimens.beenhereIconSize}/>
+            <Icon name="bookmark" color={colors.subtleRed} size={dimens.invitedIconSize} style={{marginTop: -2}}/>
           </View>
         </View>
         <FastImage style={styles.groupImage} source={{uri: groupImageSource}}/>
@@ -37,15 +36,15 @@ export default class GroupCard extends Component {
         <View style={styles.divider}/>
         <View style={styles.footer}>
           <View style={styles.footerSection}>
-            <Icon name={"account-outline"} size={footerIconSize} color={colors.greyText}/>
+            <Icon name={"account-outline"} size={dimens.footerIconSize} color={colors.greyText}/>
             <Text style={styles.footerText}>5</Text>
           </View>
           <View style={styles.footerSection}>
-            <Icon name={"clock"} size={footerIconSize} color={colors.greyText}/>
+            <Icon name={"clock"} size={dimens.footerIconSize} color={colors.greyText}/>
             <Text style={styles.footerText}>3 days</Text>
           </View>
           <View style={styles.footerSection}>
-            <Icon name={"calendar"} size={footerIconSize} color={colors.greyText}/>
+            <Icon name={"calendar"} size={dimens.footerIconSize} color={colors.greyText}/>
             <Text style={styles.footerText}>In 2 weeks</Text>
           </View>
 
@@ -53,4 +52,10 @@ export default class GroupCard extends Component {
       </CardView>
     )
   }
+}
+
+const dimens = {
+  footerIconSize: 20,
+  beenhereIconSize: 22,
+  invitedIconSize: 25,
 }

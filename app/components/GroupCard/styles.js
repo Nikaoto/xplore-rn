@@ -39,15 +39,6 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row-reverse",
   },
-  beenHereIcon: {
-    marginLeft: 3,
-    width: 20,
-    height: 24,
-  },
-  inviteIcon: {
-    width: 20,
-    height: 22,
-  },
   groupImage: {
     height: 85,
     width: "auto",
