@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     marginTop: 2,
-    marginBottom: 2,
+    marginBottom: 1,
     marginHorizontal: 10,
     flexDirection: "row",
     justifyContent: "space-between",
@@ -72,10 +72,6 @@ const styles = StyleSheet.create({
   footerSection: {
     flexDirection: "row",
     marginHorizontal: 5,
-  },
-  footerIcon: {
-    height: 20,
-    width: 20,
   },
   footerText: {
     color: colors.greyerText,

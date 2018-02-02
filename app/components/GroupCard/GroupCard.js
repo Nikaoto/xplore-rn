@@ -1,8 +1,10 @@
-import React, {Component} from "react"
-import {Image, Text, View} from "react-native"
+import React, { Component } from "react"
+import { Text, View } from "react-native"
 import FastImage from "react-native-fast-image"
+import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 import CardView from "../CardView"
 import styles from "./styles"
+import colors from "../../values/colors"
 
 export default class GroupCard extends Component {
   constructor(props) {
@@ -13,7 +15,7 @@ export default class GroupCard extends Component {
   render() {
     const groupImageSource = "https://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=450x300&maptype=hybrid&center=41.8277156308525,44.967842660844326&markers=color:orange|41.8277156308525,44.967842660844326"
     const leaderImageSource = "https://www.sardiniauniqueproperties.com/wp-content/uploads/2015/10/square-profile-pic.jpg"
-    const temp = require("../../img/temp.png")
+    const footerIconSize = 20
 
     return(
       <CardView elevation={3} style={styles.groupCard}>
@@ -35,15 +37,15 @@ export default class GroupCard extends Component {
         <View style={styles.divider}/>
         <View style={styles.footer}>
           <View style={styles.footerSection}>
-            <FastImage source={temp} style={styles.footerIcon}/>
+            <Icon name={"account-outline"} size={footerIconSize} color={colors.greyText}/>
             <Text style={styles.footerText}>5</Text>
           </View>
           <View style={styles.footerSection}>
-            <FastImage source={temp} style={styles.footerIcon}/>
+            <Icon name={"clock"} size={footerIconSize} color={colors.greyText}/>
             <Text style={styles.footerText}>3 days</Text>
           </View>
           <View style={styles.footerSection}>
-            <FastImage source={temp} style={styles.footerIcon}/>
+            <Icon name={"calendar"} size={footerIconSize} color={colors.greyText}/>
             <Text style={styles.footerText}>In 2 weeks</Text>
           </View>
 
