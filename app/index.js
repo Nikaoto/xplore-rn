@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { AppRegistry } from "react-native"
 import { Root } from "./config/routes"
 
 class XploreApp extends Component {
@@ -8,4 +9,4 @@ class XploreApp extends Component {
 }
 
 export default XploreApp
-
+AppRegistry.registerComponent("XploreApp", () => XploreApp)

@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import XploreApp from "./app/index"
-import {Platform, StatusBar, StyleSheet, View} from "react-native"
+import { AppRegistry, Platform, StatusBar, StyleSheet, View } from "react-native"
 import colors from "./app/values/colors"
 
 export default class App extends Component {
@@ -24,3 +24,5 @@ const styles = StyleSheet.create({
     height: (Platform.OS === "ios" ? 20 : StatusBar.currentHeight),
   }
 })
+
+AppRegistry.registerComponent("App", () => App)
