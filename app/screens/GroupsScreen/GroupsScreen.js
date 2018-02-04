@@ -17,22 +17,30 @@ export default class GroupsScreen extends React.Component {
       <View style={globalStyles.container}>
         <Text style={styles.titleText}>Groups Screen</Text>
         <GroupCard
-          leaderId={"qwe"}
           groupId={"asd"}
           groupName={"Excursion in Javakheti"}
-          memberCount={7}
-          durationInDays={3}
-          startsInDays={5}
-          experienced={false}
+          groupImageSource={"https://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=450x300&maptype=hybrid&center=41.8277156308525,44.967842660844326&markers=color:orange|41.8277156308525,44.967842660844326"}
+          leaderFullName={"Andrej Sapkowski"}
+          leaderImageSource={"https://www.sardiniauniqueproperties.com/wp-content/uploads/2015/10/square-profile-pic.jpg"}
+          leaderReputation={26}
+          invite={true}
+          beenHere={false}
+          memberCount={5}
+          durationText={"3 days"}
+          startsInText={"In 2 weeks"}
         />
         <GroupCard
-          leaderId={"qwe"}
           groupId={"asd"}
-          groupName={"Excursion in Javakheti"}
-          memberCount={7}
-          durationInDays={3}
-          startsInDays={5}
-          experienced={false}
+          groupName={"Taking back our holy land!"}
+          groupImageSource={"https://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=450x300&maptype=hybrid&center=41.8277156308525,44.967842660844326&markers=color:orange|41.8277156308525,44.967842660844326"}
+          leaderFullName={"Niko Nikoladze"}
+          leaderImageSource={"https://cdn.pixabay.com/photo/2016/02/25/18/26/man-1222621_640.jpg"}
+          leaderReputation={26}
+          invite={true}
+          beenHere={true}
+          memberCount={1500}
+          durationText={"<1 day"}
+          startsInText={"In 6 days"}
         />
       </View>
     )
