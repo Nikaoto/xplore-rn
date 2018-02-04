@@ -84,7 +84,7 @@ export default class GroupCard extends Component {
       <CardView elevation={3} style={styles.groupCard}>
         <View style={styles.topLayout}>
 
-          {GroupCard.renderLeader(leaderFullName, leaderReputationText, leaderImageSource)}
+          {this.renderLeader(leaderFullName, leaderReputationText, leaderImageSource)}
 
           {this.renderBadges(invite, beenHere)}
 

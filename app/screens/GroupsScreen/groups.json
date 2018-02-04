@@ -1,0 +1,51 @@
+[
+  "-L-h2Y-o296ZcNTuot4n": {
+    "destination_id": -1,
+    "destination_latitude": 41.72555958430097,
+    "destination_longitude": 44.75138437002897,
+    "end_date": 20181207,
+    "end_time": "1200",
+    "experienced": true,
+    "extra_info": "Bring your own sword.",
+    "group_image_url": "http://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=450x300&maptype=hybrid&center=41.72555958430097,44.75138437002897&markers=color:orange|41.72555958430097,44.75138437002897",
+    "group_preferences": "WORTHY KNIGHTS WHO BELIEVE IN THE GOOD OF OUR LORD. Squires also accepted.",
+    "invited_member_ids": {
+      "8": true,
+      "BREJK": true
+    },
+    "meetup_latitude": 41.72138135084667,
+    "meetup_longitude": 44.74257465451956,
+    "member_ids": {
+      "4i13stdPtLOVUwe2VnINMS6JVxY2": true
+    },
+    "name": "Crusade to Reclaim Our Lands!",
+    "start_date": 20181206,
+    "start_time": "1200"
+  },
+  "Ajsafhkjsaf1": {
+    "destination_id": 8,
+    "destination_latitude": 41.6535556,
+    "destination_longitude": 43.1910057,
+    "end_date": 20181212,
+    "end_time": "2100",
+    "experienced": true,
+    "extra_info": "The group has a few people who are familiar with the place. We're bringing extra food, but still make sure you bring your own. Also, don't forget to bring water.",
+    "group_preferences": "People who won't slow down the group during the walking sections. If you still want to join, but you feel like the distance would be too much, you could just skip them.",
+    "invited_member_ids": {
+      "12": true
+    },
+    "meetup_latitude": 41.70421,
+    "meetup_longitude": 44.7895,
+    "member_ids": {
+      "5": false,
+      "6": false,
+      "8": false,
+      "4i13stdPtLOVUwe2VnINMS6JVxY2": false,
+      "BREJK": false,
+      "NKwLg9HbaHcIuMoN8E6vDN50Sc13": true
+    },
+    "name": "Mixed Excursion in Javakheti",
+    "start_date": 20171219,
+    "start_time": "1200"
+  }
+]
