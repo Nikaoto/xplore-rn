@@ -1,5 +1,5 @@
 import React from "react"
-import {TabNavigator} from "react-navigation"
+import { TabNavigator } from "react-navigation"
 import SearchScreen from "../SearchScreen"
 import GroupsScreen from "../GroupsScreen"
 import MapScreen from "../MapScreen"
@@ -30,6 +30,9 @@ const BottomNavigation = TabNavigator({
       fontSize: 10,
       padding: 0,
       margin: 0,
+    },
+    indicatorStyle: {
+      display: "none",
     },
   },
 })
