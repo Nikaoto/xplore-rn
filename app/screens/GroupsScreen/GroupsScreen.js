@@ -1,5 +1,5 @@
 import React from "react"
-import { FlatList, StyleSheet, Text, View } from "react-native"
+import { FlatList, StyleSheet, View } from "react-native"
 import Icon from "react-native-vector-icons/MaterialIcons"
 import GroupCard from "../../components/GroupCard/GroupCard"
 import globalStyles from "../../values/styles"
@@ -22,11 +22,11 @@ export default class GroupsScreen extends React.Component {
   renderGroupCard() {
     return (
       <GroupCard
-        groupId={"asd"}
-        groupName={"brejk"}
-        groupImageSource={"https://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=450x300&maptype=hybrid&center=41.8277156308525,44.967842660844326&markers=color:orange|41.8277156308525,44.967842660844326"}
+        id={"asd"}
+        name={"brejk"}
+        imageUrl={"https://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=450x300&maptype=hybrid&center=41.8277156308525,44.967842660844326&markers=color:orange|41.8277156308525,44.967842660844326"}
         leaderFullName={"Andrej Sapkowski"}
-        leaderImageSource={"https://www.sardiniauniqueproperties.com/wp-content/uploads/2015/10/square-profile-pic.jpg"}
+        leaderImageUrl={"https://www.sardiniauniqueproperties.com/wp-content/uploads/2015/10/square-profile-pic.jpg"}
         leaderReputation={26}
         invite={true}
         beenHere={false}
@@ -42,24 +42,11 @@ export default class GroupsScreen extends React.Component {
 
     return (
       <View style={styles.container}>
-        <Text style={styles.titleText}>Groups Screen</Text>
         <FlatList
+          style={styles.groupList}
           data={groups}
           renderItem={({ item }) => this.renderGroupCard()}
-          keyExtractor={item => item.groupId}/>
-        {/*<GroupCard*/}
-          {/*groupId={"asd"}*/}
-          {/*groupName={"Taking back our holy land!"}*/}
-          {/*groupImageSource={"https://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=450x300&maptype=hybrid&center=41.8277156308525,44.967842660844326&markers=color:orange|41.8277156308525,44.967842660844326"}*/}
-          {/*leaderFullName={"Niko Nikoladze"}*/}
-          {/*leaderImageSource={"https://cdn.pixabay.com/photo/2016/02/25/18/26/man-1222621_640.jpg"}*/}
-          {/*leaderReputation={26}*/}
-          {/*invite={true}*/}
-          {/*beenHere={true}*/}
-          {/*memberCount={1500}*/}
-          {/*durationText={"<1 day"}*/}
-          {/*startsInText={"In 6 days"}*/}
-        {/*/>*/}
+          keyExtractor={item => item.id}/>
       </View>
     )
   }
@@ -68,9 +55,11 @@ export default class GroupsScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 5,
     marginHorizontal: 5,
     alignItems: "stretch",
+  },
+  groupList: {
+    paddingBottom: 15,
   },
   titleText: {
     alignSelf: "stretch",

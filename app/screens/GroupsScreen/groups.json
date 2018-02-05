@@ -1,44 +1,43 @@
 [
   {
-    "groupId": "-L-h2Y-o296ZcNTuot4n",
-    "destination_id": -1,
-    "destination_latitude": 41.72555958430097,
-    "destination_longitude": 44.75138437002897,
-    "end_date": 20181207,
-    "end_time": "1200",
-    "experienced": true,
-    "extra_info": "Bring your own sword.",
-    "group_image_url": "http://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=450x300&maptype=hybrid&center=41.72555958430097,44.75138437002897&markers=color:orange|41.72555958430097,44.75138437002897",
-    "group_preferences": "WORTHY KNIGHTS WHO BELIEVE IN THE GOOD OF OUR LORD. Squires also accepted.",
-    "invited_member_ids": {
+    "id": "-L-h2Y-o296ZcNTuot4n",
+    "destinationLatitude": 41.72555958430097,
+    "destinationLongitude": 44.75138437002897,
+    "endDate": 20181207,
+    "endTime": "1200",
+    "beenHere": true,
+    "extraInfo": "Bring your own sword.",
+    "imageUrl": "http://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=450x300&maptype=hybrid&center=41.72555958430097,44.75138437002897&markers=color:orange|41.72555958430097,44.75138437002897",
+    "preferences": "WORTHY KNIGHTS WHO BELIEVE IN THE GOOD OF OUR LORD. Squires also accepted.",
+    "invitedMemberIds": {
       "8": true,
       "BREJK": true
     },
-    "meetup_latitude": 41.72138135084667,
-    "meetup_longitude": 44.74257465451956,
-    "member_ids": {
+    "meetupLatitude": 41.72138135084667,
+    "meetupLongitude": 44.74257465451956,
+    "memberIds": {
       "4i13stdPtLOVUwe2VnINMS6JVxY2": true
     },
     "name": "Crusade to Reclaim Our Lands!",
-    "start_date": 20181206,
-    "start_time": "1200"
+    "startDate": 20181206,
+    "startTime": "1200"
   },
   {
-    "groupId": "Ajsafhkjsaf1",
+    "id": "Ajsafhkjsaf1",
     "destination_id": 8,
-    "destination_latitude": 41.6535556,
-    "destination_longitude": 43.1910057,
-    "end_date": 20181212,
-    "end_time": "2100",
-    "experienced": true,
-    "extra_info": "The group has a few people who are familiar with the place. We're bringing extra food, but still make sure you bring your own. Also, don't forget to bring water.",
-    "group_preferences": "People who won't slow down the group during the walking sections. If you still want to join, but you feel like the distance would be too much, you could just skip them.",
-    "invited_member_ids": {
+    "destinationLatitude": 41.6535556,
+    "destinationLongitude": 43.1910057,
+    "endDate": 20181212,
+    "endTime": "2100",
+    "beenHere": true,
+    "extraInfo": "The group has a few people who are familiar with the place. We're bringing extra food, but still make sure you bring your own. Also, don't forget to bring water.",
+    "preferences": "People who won't slow down the group during the walking sections. If you still want to join, but you feel like the distance would be too much, you could just skip them.",
+    "invitedMemberIds": {
       "12": true
     },
-    "meetup_latitude": 41.70421,
-    "meetup_longitude": 44.7895,
-    "member_ids": {
+    "meetupLatitude": 41.70421,
+    "meetupLongitude": 44.7895,
+    "memberIds": {
       "5": false,
       "6": false,
       "8": false,
@@ -47,22 +46,60 @@
       "NKwLg9HbaHcIuMoN8E6vDN50Sc13": true
     },
     "name": "Mixed Excursion in Javakheti",
-    "start_date": 20171219,
-    "start_time": "1200"
+    "startDate": 20171219,
+    "startTime": "1200"
   },
   {
-    "groupId": "Ajsafhkjsaf1"
+    "id": "asd",
+    "destinationLatitude": 41.6535556,
+    "destinationLongitude": 43.1910057,
+    "endDate": 20181212,
+    "endTime": "2100",
+    "beenHere": true,
+    "extraInfo": "The group has a few people who are familiar with the place. We're bringing extra food, but still make sure you bring your own. Also, don't forget to bring water.",
+    "preferences": "People who won't slow down the group during the walking sections. If you still want to join, but you feel like the distance would be too much, you could just skip them.",
+    "invitedMemberIds": {
+      "12": true
+    },
+    "meetupLatitude": 41.70421,
+    "meetupLongitude": 44.7895,
+    "memberIds": {
+      "5": false,
+      "6": false,
+      "8": false,
+      "4i13stdPtLOVUwe2VnINMS6JVxY2": false,
+      "BREJK": false,
+      "NKwLg9HbaHcIuMoN8E6vDN50Sc13": true
+    },
+    "name": "Taking back our holy land!",
+    "startDate": 20171219,
+    "startTime": "1200"
   },
   {
-    "groupId": "Ajsafhkjsaf1"
-  },
-  {
-    "groupId": "Ajsafhkjsaf1"
-  },
-  {
-    "groupId": "Ajsafhkjsaf1"
-  },
-  {
-    "groupId": "Ajsafhkjsaf1"
+    "id": "Ajsafhkjsaf1",
+    "destinationLatitude": 41.6535556,
+    "destinationLongitude": 43.1910057,
+    "imageUrl": "https://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=450x300&maptype=hybrid&center=41.8277156308525,44.967842660844326&markers=color:orange|41.6535556,43.1910057",
+    "endDate": 20181212,
+    "endTime": "2100",
+    "beenHere": true,
+    "extraInfo": "The group has a few people who are familiar with the place. We're bringing extra food, but still make sure you bring your own. Also, don't forget to bring water.",
+    "preferences": "People who won't slow down the group during the walking sections. If you still want to join, but you feel like the distance would be too much, you could just skip them.",
+    "invitedMemberIds": {
+      "12": true
+    },
+    "meetupLatitude": 41.70421,
+    "meetupLongitude": 44.7895,
+    "memberIds": {
+      "5": false,
+      "6": false,
+      "8": false,
+      "4i13stdPtLOVUwe2VnINMS6JVxY2": false,
+      "BREJK": false,
+      "NKwLg9HbaHcIuMoN8E6vDN50Sc13": true
+    },
+    "name": "Mixed Excursion in Javakheti",
+    "startDate": 20171219,
+    "startTime": "1200"
   }
 ]
