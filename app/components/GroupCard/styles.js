@@ -7,20 +7,22 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   groupCard: {
-    marginTop: 10,
-    marginBottom: 5,
-    marginHorizontal: 5,
+    margin: 5,
     padding: 0,
     alignSelf: "stretch",
   },
   leaderLayout: {
+    overflow: "hidden",
     margin: 10,
     flexDirection: "row",
+  },
+  leaderImageWrapper: {
+    overflow: "hidden",
+    borderRadius: 25,
   },
   leaderImage: {
     height: 50,
     width: 50,
-    borderRadius: 25,
   },
   leaderTextLayout: {
     marginLeft: 5,

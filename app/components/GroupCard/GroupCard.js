@@ -12,11 +12,13 @@ export default class GroupCard extends Component {
     this.state = {}
   }
 
-  renderLeader(leaderFullName, leaderReputationText, leaderImageSource) {
+  renderLeader(leaderFullName, leaderReputationText, leaderImageUrl) {
     return (
       <View style={styles.leaderLayout}>
 
-        <FastImage style={styles.leaderImage} source={{uri: leaderImageSource}}/>
+        <View style={styles.leaderImageWrapper}>
+          <FastImage style={styles.leaderImage} source={{uri: leaderImageUrl}}/>
+        </View>
 
         <View style={styles.leaderTextLayout}>
           <Text style={styles.leaderReputationText} numberOfLines={1}>{leaderReputationText}</Text>
@@ -67,11 +69,11 @@ export default class GroupCard extends Component {
   }
 
   render() {
-    const groupId = "ASJKDHKH"
-    const groupName = this.props.groupName
-    const groupImageSource = this.props.groupImageSource
+    const id = "ASJKDHKH"
+    const name = this.props.name
+    const imageUrl = this.props.imageUrl
     const leaderFullName = this.props.leaderFullName
-    const leaderImageSource = this.props.leaderImageSource
+    const leaderImageUrl = this.props.leaderImageUrl
     const leaderReputation = this.props.leaderReputation
     const leaderReputationText = `${leaderReputation} REPUTATION`
     const invite = this.props.invite
@@ -84,15 +86,15 @@ export default class GroupCard extends Component {
       <CardView elevation={3} style={styles.groupCard}>
         <View style={styles.topLayout}>
 
-          {this.renderLeader(leaderFullName, leaderReputationText, leaderImageSource)}
+          {this.renderLeader(leaderFullName, leaderReputationText, leaderImageUrl)}
 
           {this.renderBadges(invite, beenHere)}
 
         </View>
 
-        <FastImage style={styles.groupImage} source={{uri: groupImageSource}}/>
+        <FastImage style={styles.groupImage} source={{uri: imageUrl}}/>
 
-        <Text style={styles.groupNameText} numberOfLines={1}>{groupName}</Text>
+        <Text style={styles.groupNameText} numberOfLines={1}>{name}</Text>
 
         <View style={styles.divider}/>
 
