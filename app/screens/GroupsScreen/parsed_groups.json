@@ -1,0 +1,67 @@
+[
+  {
+    "id": "-L-h2Y-o296ZcNTuot4n",
+    "name": "Crusade to Reclaim Our Lands!",
+    "imageUrl": "http://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=450x300&maptype=hybrid&center=41.72555958430097,44.75138437002897&markers=color:orange|41.72555958430097,44.75138437002897",
+    "leaderFullName": "Deus Vult",
+    "leaderImageUrl": "https://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=450x300&maptype=hybrid&center=41.8277156308525,44.967842660844326&markers=color:orange|41.8277156308525,44.967842660844326",
+    "leaderReputationText": "26 REPUTATION",
+    "beenHere": true,
+    "invite" : false,
+    "memberCount": "1500",
+    "durationText": "2 weeks",
+    "startsInText": "Tomorrow"
+  },
+  {
+    "id": "Ajsafhkjsaf1",
+    "name": "Mixed Excursion in Javakheti",
+    "imageUrl": "http://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=450x300&maptype=hybrid&center=41.72555958430097,44.75138437002897&markers=color:orange|41.72555958430097,44.75138437002897",
+    "leaderFullName": "Andrej Sapkowski",
+    "leaderImageUrl": "http://i.dailymail.co.uk/i/pix/2017/04/20/13/3F6B966D00000578-4428630-image-m-80_1492690622006.jpg",
+    "leaderReputationText": "12 REPUTATION",
+    "beenHere": true,
+    "invite" : true,
+    "memberCount": "5",
+    "durationText": "3 days",
+    "startsInText": "In 4 months"
+  },
+  {
+    "id": "Ajsafhkjsaf1",
+    "name": "Mixed Excursion in Javakheti",
+    "imageUrl": "http://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=450x300&maptype=hybrid&center=41.72555958430097,44.75138437002897&markers=color:orange|41.72555958430097,44.75138437002897",
+    "leaderFullName": "Andrej Sapkowski",
+    "leaderImageUrl": "http://i.dailymail.co.uk/i/pix/2017/04/20/13/3F6B966D00000578-4428630-image-m-80_1492690622006.jpg",
+    "leaderReputationText": "12 REPUTATION",
+    "beenHere": false,
+    "invite" : false,
+    "memberCount": "5",
+    "durationText": "3 days",
+    "startsInText": "In 4 months"
+  },
+  {
+    "id": "Ajsafhkjsaf1",
+    "name": "Mixed Excursion in Javakheti",
+    "imageUrl": "http://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=450x300&maptype=hybrid&center=41.72555958430097,44.75138437002897&markers=color:orange|41.72555958430097,44.75138437002897",
+    "leaderFullName": "Andrej Sapkowski",
+    "leaderImageUrl": "http://i.dailymail.co.uk/i/pix/2017/04/20/13/3F6B966D00000578-4428630-image-m-80_1492690622006.jpg",
+    "leaderReputationText": "12 REPUTATION",
+    "beenHere": true,
+    "invite" : false,
+    "memberCount": "5",
+    "durationText": "3 days",
+    "startsInText": "In 4 months"
+  },
+  {
+    "id": "Ajsafhkjsaf1",
+    "name": "Mixed Excursion in Javakheti",
+    "imageUrl": "http://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=450x300&maptype=hybrid&center=41.72555958430097,44.75138437002897&markers=color:orange|41.72555958430097,44.75138437002897",
+    "leaderFullName": "Andrej Sapkowski",
+    "leaderImageUrl": "http://i.dailymail.co.uk/i/pix/2017/04/20/13/3F6B966D00000578-4428630-image-m-80_1492690622006.jpg",
+    "leaderReputationText": "12 REPUTATION",
+    "beenHere": true,
+    "invite" : true,
+    "memberCount": "5",
+    "durationText": "3 days",
+    "startsInText": "In 4 months"
+  }
+]
