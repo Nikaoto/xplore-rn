@@ -1,4 +1,4 @@
-import {Platform, StyleSheet} from "react-native"
+import { Platform, StyleSheet } from "react-native"
 import colors from "../../values/colors"
 
 const styles = StyleSheet.create({
@@ -7,7 +7,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   groupCard: {
-    marginTop: 15,
+    marginTop: 10,
+    marginBottom: 5,
     marginHorizontal: 5,
     padding: 0,
     alignSelf: "stretch",
