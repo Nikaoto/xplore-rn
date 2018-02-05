@@ -1,5 +1,6 @@
 [
-  "-L-h2Y-o296ZcNTuot4n": {
+  {
+    "groupId": "-L-h2Y-o296ZcNTuot4n",
     "destination_id": -1,
     "destination_latitude": 41.72555958430097,
     "destination_longitude": 44.75138437002897,
@@ -22,7 +23,8 @@
     "start_date": 20181206,
     "start_time": "1200"
   },
-  "Ajsafhkjsaf1": {
+  {
+    "groupId": "Ajsafhkjsaf1",
     "destination_id": 8,
     "destination_latitude": 41.6535556,
     "destination_longitude": 43.1910057,
@@ -47,5 +49,20 @@
     "name": "Mixed Excursion in Javakheti",
     "start_date": 20171219,
     "start_time": "1200"
+  },
+  {
+    "groupId": "Ajsafhkjsaf1"
+  },
+  {
+    "groupId": "Ajsafhkjsaf1"
+  },
+  {
+    "groupId": "Ajsafhkjsaf1"
+  },
+  {
+    "groupId": "Ajsafhkjsaf1"
+  },
+  {
+    "groupId": "Ajsafhkjsaf1"
   }
 ]

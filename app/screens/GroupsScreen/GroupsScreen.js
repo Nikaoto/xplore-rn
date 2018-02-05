@@ -1,5 +1,5 @@
 import React from "react"
-import { StyleSheet, Text, View, FlatList } from "react-native"
+import { FlatList, StyleSheet, Text, View } from "react-native"
 import Icon from "react-native-vector-icons/MaterialIcons"
 import GroupCard from "../../components/GroupCard/GroupCard"
 import globalStyles from "../../values/styles"
@@ -41,12 +41,12 @@ export default class GroupsScreen extends React.Component {
     const groups = this.state.groupData
 
     return (
-      <View style={globalStyles.container}>
+      <View style={styles.container}>
         <Text style={styles.titleText}>Groups Screen</Text>
         <FlatList
           data={groups}
-          renderItem={(item) => this.renderGroupCard()}
-          keyExtractor={(item, index) => item.groupId}/>
+          renderItem={({ item }) => this.renderGroupCard()}
+          keyExtractor={item => item.groupId}/>
         {/*<GroupCard*/}
           {/*groupId={"asd"}*/}
           {/*groupName={"Taking back our holy land!"}*/}
@@ -67,7 +67,9 @@ export default class GroupsScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-
+    marginTop: 5,
+    marginHorizontal: 5,
+    alignItems: "stretch",
   },
   titleText: {
     alignSelf: "stretch",
