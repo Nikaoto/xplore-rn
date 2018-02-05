@@ -57,8 +57,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   footer: {
-    marginTop: 2,
-    marginBottom: 1,
+    marginVertical: 2,
     marginHorizontal: 10,
     flexDirection: "row",
     justifyContent: "space-between",

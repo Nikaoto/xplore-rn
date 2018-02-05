@@ -69,18 +69,18 @@ export default class GroupCard extends Component {
   }
 
   render() {
-    const id = "ASJKDHKH"
-    const name = this.props.name
-    const imageUrl = this.props.imageUrl
-    const leaderFullName = this.props.leaderFullName
-    const leaderImageUrl = this.props.leaderImageUrl
-    const leaderReputation = this.props.leaderReputation
-    const leaderReputationText = `${leaderReputation} REPUTATION`
-    const invite = this.props.invite
-    const beenHere = this.props.beenHere
-    const memberCount = this.props.memberCount
-    const durationText = this.props.durationText
-    const startsInText = this.props.startsInText
+    const {
+      id,
+      name,
+      imageUrl,
+      leaderFullName,
+      leaderImageUrl,
+      leaderReputationText,
+      invite,
+      beenHere,
+      memberCount,
+      durationText,
+      startsInText } = this.props
 
     return(
       <CardView elevation={3} style={styles.groupCard}>

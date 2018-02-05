@@ -2,9 +2,9 @@
   {
     "id": "-L-h2Y-o296ZcNTuot4n",
     "name": "Crusade to Reclaim Our Lands!",
-    "imageUrl": "http://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=450x300&maptype=hybrid&center=41.72555958430097,44.75138437002897&markers=color:orange|41.72555958430097,44.75138437002897",
+    "imageUrl": "https://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=450x300&maptype=hybrid&center=41.8277156308525,44.967842660844326&markers=color:orange|41.8277156308525,44.967842660844326",
     "leaderFullName": "Deus Vult",
-    "leaderImageUrl": "https://maps.googleapis.com/maps/api/staticmap?&zoom=16&size=450x300&maptype=hybrid&center=41.8277156308525,44.967842660844326&markers=color:orange|41.8277156308525,44.967842660844326",
+    "leaderImageUrl": "https://scontent.ftbs1-2.fna.fbcdn.net/v/t1.0-1/p50x50/27067376_1760342417338969_8394522009337562638_n.jpg?oh=f362b631b0c9db28ab9135ecc3b83bf6&oe=5AE319D6",
     "leaderReputationText": "26 REPUTATION",
     "beenHere": true,
     "invite" : false,
