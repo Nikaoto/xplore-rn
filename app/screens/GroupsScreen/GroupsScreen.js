@@ -67,6 +67,7 @@ export default class GroupsScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     marginTop: 5,
     marginHorizontal: 5,
     alignItems: "stretch",
