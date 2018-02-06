@@ -6,7 +6,6 @@ import MapScreen from "../MapScreen"
 import ProfileScreen from "../ProfileScreen"
 import Icon from "react-native-vector-icons/MaterialIcons"
 import colors from "../../values/colors"
-import globalStyles from "../../values/styles"
 
 const BottomNavigation = TabNavigator({
 	Search : { screen: SearchScreen },
@@ -40,13 +39,20 @@ const BottomNavigation = TabNavigator({
   navigationOptions: ({ navigation }) => ({
     tabBarIcon: ({ tintColor }) => (
       <Icon
-        name={globalStyles.navBarIcons[navigation.state.routeName]}
-        size={globalStyles.bottomNavIconSize}
+        name={navBarIcons[navigation.state.routeName]}
+        size={27}
         style={{ textAlign: "center" }}
         color={tintColor}
       />
     ),
   }),
 })
+
+const navBarIcons = {
+  Search: "search",
+  Groups: "group",
+  Map: "place",
+  Profile: "account-circle"
+}
 
 export default BottomNavigation
