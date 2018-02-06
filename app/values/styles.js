@@ -2,6 +2,12 @@
 
 const styles = {
   bottomNavIconSize: 27,
+  navBarIcons: {
+    Search: "search",
+    Groups: "group",
+    Map: "place",
+    Profile: "account-circle",
+  },
   container: {
     marginTop: 5,
     marginHorizontal: 5,

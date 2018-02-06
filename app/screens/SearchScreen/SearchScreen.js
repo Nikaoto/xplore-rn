@@ -2,7 +2,6 @@ import React from "react"
 import { Text, View } from "react-native"
 import Button from "../../components/Button/Button"
 import CardView from "../../components/CardView/CardView"
-import Icon from "react-native-vector-icons/MaterialIcons"
 import globalStyles from "../../values/styles"
 
 export default class SearchScreen extends React.Component {
@@ -11,13 +10,13 @@ export default class SearchScreen extends React.Component {
     super(props)
     this.state = {searchText: ""}
   }
-
+/*
   static navigationOptions = {
     tabBarLabel: 'Search',
     tabBarIcon: ({ tintColor }) => (
       <Icon name="search" size={globalStyles.bottomNavIconSize} color={tintColor}/>
     ),
-  }
+  }*/
 
   render() {
     return (

@@ -4,7 +4,9 @@ import SearchScreen from "../SearchScreen"
 import GroupsScreen from "../GroupsScreen"
 import MapScreen from "../MapScreen"
 import ProfileScreen from "../ProfileScreen"
+import Icon from "react-native-vector-icons/MaterialIcons"
 import colors from "../../values/colors"
+import globalStyles from "../../values/styles"
 
 const BottomNavigation = TabNavigator({
 	Search : { screen: SearchScreen },
@@ -35,6 +37,18 @@ const BottomNavigation = TabNavigator({
       display: "none",
     },
   },
+  navigationOptions: ({ navigation }) => ({
+    tabBarIcon: ({ tintColor }) => (
+      <Icon
+        name={globalStyles.navBarIcons[navigation.state.routeName]}
+        size={globalStyles.bottomNavIconSize}
+        style={{ textAlign: "center" }}
+        color={tintColor}
+      />
+    ),
+  }),
 })
+
+//TODO remove navigationOptions in each screen ^ (check with ios first)
 
 export default BottomNavigation

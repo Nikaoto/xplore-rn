@@ -1,17 +1,16 @@
 import React, { Component } from "react"
 import { Button, Text, View } from "react-native"
-import Icon from "react-native-vector-icons/MaterialIcons"
 import { isUserLoggedIn, setUserLoggedIn } from "../../reducers/AccountUtil"
 import { clearAllPrefs } from "../../reducers/PrefsUtil"
 import globalStyles from "../../values/styles"
 
 export default class ProfileScreen extends Component {
-  static navigationOptions = {
+/*  static navigationOptions = {
     tabBarLabel: 'Profile',
     tabBarIcon: ({ tintColor }) => (
-      <Icon name="account-circle" size={globalStyles.bottomNavIconSize} color={tintColor}/>
+      <Icon style={{ textAlign: "center" }} name="account-circle" size={globalStyles.bottomNavIconSize} color={tintColor}/>
     ),
-  }
+  }*/
 
   onLoadPress() {
     isUserLoggedIn().then(value => console.log(value))
