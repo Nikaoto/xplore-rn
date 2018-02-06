@@ -10,13 +10,6 @@ export default class SearchScreen extends React.Component {
     super(props)
     this.state = {searchText: ""}
   }
-/*
-  static navigationOptions = {
-    tabBarLabel: 'Search',
-    tabBarIcon: ({ tintColor }) => (
-      <Icon name="search" size={globalStyles.bottomNavIconSize} color={tintColor}/>
-    ),
-  }*/
 
   render() {
     return (

@@ -49,6 +49,4 @@ const BottomNavigation = TabNavigator({
   }),
 })
 
-//TODO remove navigationOptions in each screen ^ (check with ios first)
-
 export default BottomNavigation

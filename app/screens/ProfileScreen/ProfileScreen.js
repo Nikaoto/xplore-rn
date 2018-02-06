@@ -5,12 +5,6 @@ import { clearAllPrefs } from "../../reducers/PrefsUtil"
 import globalStyles from "../../values/styles"
 
 export default class ProfileScreen extends Component {
-/*  static navigationOptions = {
-    tabBarLabel: 'Profile',
-    tabBarIcon: ({ tintColor }) => (
-      <Icon style={{ textAlign: "center" }} name="account-circle" size={globalStyles.bottomNavIconSize} color={tintColor}/>
-    ),
-  }*/
 
   onLoadPress() {
     isUserLoggedIn().then(value => console.log(value))

@@ -4,13 +4,6 @@ import GroupCard from "../../components/GroupCard/GroupCard"
 import groupData from "./parsed_groups.json"
 
 export default class GroupsScreen extends React.Component {
-/*
-  static navigationOptions = {
-    tabBarLabel: 'Groups',
-    tabBarIcon: ({ tintColor }) => (
-      <Icon name="group" size={globalStyles.bottomNavIconSize} color={tintColor}/>
-    ),
-  }*/
 
   componentWillMount() {
     console.log(groupData)
