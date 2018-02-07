@@ -24,6 +24,11 @@ const BottomNavigation = TabNavigator({
     showIcon: true,
     style : {
       backgroundColor: colors.navBarBackgroundColor,
+      shadowOpacity: 0.1,
+      shadowColor: "black",
+      shadowOffset: {height: -1, width: 0},
+      shadowRadius: 1,
+      elevation: 1,
       paddingBottom: 0,
       marginBottom: 0,
     },
