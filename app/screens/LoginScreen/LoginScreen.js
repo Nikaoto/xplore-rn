@@ -1,15 +1,15 @@
-import React, {Component} from "react"
-import {NavigationActions} from "react-navigation"
-import {StyleSheet, Text, View} from "react-native"
+import React, { Component } from "react"
+import { NavigationActions } from "react-navigation"
+import { Image, StyleSheet, Text, View } from "react-native"
 import EmailInput from "../../components/EmailInput"
 import PasswordInput from "../../components/PasswordInput"
 import Button from "../../components/Button"
 
 import strings from "../../values/strings"
 
-import {setUserLoggedIn} from "../../reducers/AccountUtil"
-import {isValidEmail} from "../../reducers/FormUtil"
-import {isFirstBoot} from "../../reducers/PrefsUtil"
+import { setUserLoggedIn } from "../../reducers/AccountUtil"
+import { isValidEmail } from "../../reducers/FormUtil"
+import { isFirstBoot } from "../../reducers/PrefsUtil"
 
 // TODO write description
 
@@ -21,7 +21,10 @@ export default class LoginScreen extends Component {
   }
 
   static navigationOptions = {
-    title: strings.login
+    title: strings.login,
+    style:{
+      backgroundColor: "white",
+    },
   }
 
   onSubmit() {
@@ -66,7 +69,7 @@ export default class LoginScreen extends Component {
   render() {
     return(
       <View style={styles.container}>
-        <Text style={styles.xploreLogo}>Xpore Logo Placeholder</Text>
+        <Image style={styles.xploreLogo} source={require("../../img/login_logo.png")} resizeMode={"contain"}/>
         <EmailInput onChangeText={(text) => this.setState({emailText: text})} style={{alignSelf: "stretch"}}/>
         <PasswordInput style={{alignSelf: "stretch", marginTop: 10}}/>
         <Button style={styles.xploreLoginButton} onPress={this.onSubmit}>
@@ -81,11 +84,15 @@ export default class LoginScreen extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     alignItems: "center",
-    margin: 20,
+    backgroundColor: "white",
+    paddingHorizontal: 20,
+    paddingVertical: 10,
   },
   xploreLogo: {
-    margin: 10,
+    alignSelf: "center",
+    marginBottom: 5,
   },
   xploreLoginButton: {
     marginTop: 30,
