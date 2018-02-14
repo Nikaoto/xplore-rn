@@ -1,14 +1,14 @@
-import React, {Component} from "react"
-import {NavigationActions, StackNavigator} from "react-navigation"
-import {isUserLoggedIn} from "../reducers/AccountUtil"
-import {isFirstBoot} from "../reducers/PrefsUtil"
+import React, { Component } from "react"
+import { Image, StyleSheet, View } from "react-native"
+import { NavigationActions, StackNavigator } from "react-navigation"
+import { isUserLoggedIn } from "../reducers/AccountUtil"
+import { isFirstBoot } from "../reducers/PrefsUtil"
 import Tabs from "../screens/Tabs"
 import LoginScreen from "../screens/LoginScreen"
 import WelcomeScreen from "../screens/WelcomeScreen"
-import LoadingIndicator from "../components/LoadingIndicator/LoadingIndicator"
 
 class StartScreen extends Component {
-  // TODO put xplore logo here instead of loading indicator
+
   constructor(props) {
     super(props)
   }
@@ -55,10 +55,28 @@ class StartScreen extends Component {
   }
 
   render() {
-    return <LoadingIndicator center={true} size={"large"}/>
+    return(
+      <View style={styles.container}>
+        <Image style={styles.logo} resizeMode={"contain"} source={require("../img/logo.png")}/>
+      </View>
+    )
 
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    display: "flex",
+    backgroundColor: "white",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 30,
+  },
+  logo: {
+    width: 250,
+  },
+})
 
 export const Root = StackNavigator({
   Start: {
