@@ -1,20 +1,45 @@
 import React from "react"
 import { FlatList, StyleSheet, Text, View } from "react-native"
 import GroupCard from "../../components/GroupCard/GroupCard"
-import groupData from "./groups.json"
 import globalStyles from "../../values/styles"
 
 export default class GroupsScreen extends React.Component {
 
-  componentWillMount() {
-    console.log(groupData)
-    this.setState({groupData: groupData})
+  constructor(props) {
+    super(props)
+    this.state = {}
+  }
+
+  componentDidMount() {
+    //this.setState({groupData: groupData})
+    this.fetchGroups(5)
+      .then(res => res.json())
+      .then(res => this.setState({ groupData: res.data.groups}))
+  }
+
+  fetchGroups(count) {
+    const serverURL = "http://10.0.2.2:8080/graphql"
+    const groupQuery = `{
+      groups(count: ${count}){
+        id
+        name
+        imageUrl
+        beenHere
+        memberIds
+        leaderIds
+      }
+    }`
+
+    return fetch(serverURL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        query: groupQuery
+      })
+    })
   }
 
   // TODO move all groupcard logic to GroupCard class
-
-
-
   renderGroupCard(group) {
     return (
       <View>
@@ -39,19 +64,23 @@ export default class GroupsScreen extends React.Component {
   }
 
   tempRenderGroupCard(group) {
+    const {id, name, imageUrl, beenHere, leaderIds, memberIds} = group
+
+    const memberCount = memberIds.length + leaderIds.length
+
     return(
       <GroupCard
-        id={group.id}
-        name={group.name}
-        imageUrl={group.imageUrl}
+        id={id}
+        name={name}
+        imageUrl={imageUrl}
         leaderFullName={"LEADER FULL NAME"}
         leaderImageUrl={"LEADER IMG URL"}
         leaderReputationText={"99 REPUTATION"}
         invite={false}
-        beenHere={group.beenHere}
-        memberCount={69}
+        beenHere={beenHere}
+        memberCount={memberCount}
         durationText={"69 days"}
-        startsInText={"In 2 weeks"}
+        startsInText={"In 69 weeks"}
       />
     )
   }
