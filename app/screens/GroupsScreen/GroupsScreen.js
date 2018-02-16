@@ -1,7 +1,8 @@
 import React from "react"
-import { FlatList, StyleSheet, View } from "react-native"
+import { FlatList, StyleSheet, Text, View } from "react-native"
 import GroupCard from "../../components/GroupCard/GroupCard"
-import groupData from "./parsed_groups.json"
+import groupData from "./groups.json"
+import globalStyles from "../../values/styles"
 
 export default class GroupsScreen extends React.Component {
 
@@ -10,20 +11,47 @@ export default class GroupsScreen extends React.Component {
     this.setState({groupData: groupData})
   }
 
+  // TODO move all groupcard logic to GroupCard class
+
+
+
   renderGroupCard(group) {
     return (
+      <View>
+        <Text>{"id: " + group.id}</Text>
+        <Text>{"name: " + group.name}</Text>
+        <Text>{"description: " + group.description}</Text>
+        <Text>{"imageUrl: " + group.imageUrl}</Text>
+        <Text>{"meetupLatitude: " + group.meetupLatitude}</Text>
+        <Text>{"meetupLongitude: " + group.meetupLongitude}</Text>
+        <Text>{"startDate: " + group.startDate}</Text>
+        <Text>{"startTime: " + group.startTime}</Text>
+        <Text>{"endDate: " + group.endDate}</Text>
+        <Text>{"endTime: " + group.endTime}</Text>
+        <Text>{"beenHere: " + group.beenHere}</Text>
+        <Text>{"leaderIds: " + group.leaderIds}</Text>
+        <Text>{"memberIds: " + group.memberIds}</Text>
+        <Text>{"invitedMemberIds: " + group.invitedMemberIds}</Text>
+        <Text>{"requestingMemberIds: " + group.requestingMemberIds}</Text>
+        <View style={[globalStyles.divider, {marginTop: 5, marginBottom: 10}]}/>
+      </View>
+    )
+  }
+
+  tempRenderGroupCard(group) {
+    return(
       <GroupCard
         id={group.id}
         name={group.name}
         imageUrl={group.imageUrl}
-        leaderFullName={group.leaderFullName}
-        leaderImageUrl={group.leaderImageUrl}
-        leaderReputationText={group.leaderReputationText}
-        invite={group.invite}
+        leaderFullName={"LEADER FULL NAME"}
+        leaderImageUrl={"LEADER IMG URL"}
+        leaderReputationText={"99 REPUTATION"}
+        invite={false}
         beenHere={group.beenHere}
-        memberCount={group.memberCount}
-        durationText={group.durationText}
-        startsInText={group.startsInText}
+        memberCount={69}
+        durationText={"69 days"}
+        startsInText={"In 2 weeks"}
       />
     )
   }
@@ -35,7 +63,7 @@ export default class GroupsScreen extends React.Component {
       <View style={styles.container}>
         <FlatList
           data={groups}
-          renderItem={({ item }) => this.renderGroupCard(item)}
+          renderItem={({ item }) => this.tempRenderGroupCard(item)}
           keyExtractor={item => item.id}/>
       </View>
     )

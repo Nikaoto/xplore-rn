@@ -9,6 +9,10 @@ const styles = {
   stretch: {
     alignSelf: "stretch",
   },
+  divider: {
+    borderBottomColor: 'lightgrey',
+    borderBottomWidth: 1,
+  },
 }
 
 export default styles
