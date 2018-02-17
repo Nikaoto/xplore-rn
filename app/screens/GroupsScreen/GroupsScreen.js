@@ -26,7 +26,11 @@ export default class GroupsScreen extends React.Component {
         imageUrl
         beenHere
         memberIds
-        leaderIds
+        leaders {
+          name
+          reputation
+          imageUrl
+        }
       }
     }`
 
@@ -64,18 +68,18 @@ export default class GroupsScreen extends React.Component {
   }
 
   tempRenderGroupCard(group) {
-    const {id, name, imageUrl, beenHere, leaderIds, memberIds} = group
-
-    const memberCount = memberIds.length + leaderIds.length
+    const {id, name, imageUrl, beenHere, leaders, memberIds} = group
+    const memberCount = memberIds.length + leaders.length
+    const mainLeader = leaders[0]
 
     return(
       <GroupCard
         id={id}
         name={name}
         imageUrl={imageUrl}
-        leaderFullName={"LEADER FULL NAME"}
-        leaderImageUrl={"LEADER IMG URL"}
-        leaderReputationText={"99 REPUTATION"}
+        leaderFullName={mainLeader.name}
+        leaderImageUrl={mainLeader.imageUrl}
+        leaderReputationText={mainLeader.reputation + " REPUTATION"}
         invite={false}
         beenHere={beenHere}
         memberCount={memberCount}
