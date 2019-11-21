@@ -1,6 +1,6 @@
 # xplore-rn
 
-MVP rebuild of [Xplore](https://github.com/Nikaoto/xplore) in React Native.
+Barebones proof of concept rebuild of [Xplore](https://github.com/Nikaoto/xplore) in React Native.
 
 If you wish to know all about Xplore, check out my blog post: [Learning from your failed startup](https://nika.ninja/blog/learning-from-your-failed-startup)
 
