@@ -1,28 +1,18 @@
 # xplore-rn
-Xplore app in React Native
 
-# Using
-- yarn
-- react-navigation
-- react-native-fast-image
+MVP rebuild of [Xplore](https://github.com/Nikaoto/xplore) in React Native.
 
-# Install
-Install Yarn
+If you wish to know all about Xplore, check out my blog post [Learning from your failed startup](https://nika.ninja/blog/learning-from-your-failed-startup)
+
+### Install
+
 ```
-npm install -g yarn
-```
-
-*on Windows, download yarn installer .msi*
-<br><br>
-
-Install all required dependencies
-```
+git clone
 cd xplore-rn
 yarn install
 ```
-<br>
 
-# Launch
+### Run
 
 Android:
 ```
@@ -33,3 +23,7 @@ iOS:
 ```
 react-native run-ios
 ```
+
+### License
+
+xplore-rn is licensed under the [2-clause BSD license](LICENSE).
